@@ -1,0 +1,10 @@
+﻿.env
+*.env
+*.key
+*.pem
+*.pfx
+*.crt
+*.cer
+*.pub
+*.json
+node_modules/
