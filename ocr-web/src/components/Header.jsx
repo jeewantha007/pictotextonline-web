@@ -1,15 +1,17 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({title ,des}) => {
   return (
     <header className="pt-6 sm:pt-8 lg:pt-16 pb-4 sm:pb-6 lg:pb-8">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <h1 className="text-2xl sm:text-3xl lg:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-900 to-indigo-900 bg-clip-text text-transparent mb-3 sm:mb-4">
-          Image to Text Converter
+          {title}
+         
         </h1>
         
         <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed px-2">
-          An online image to text converter to extract text from images.
+          {des}
+        
         </p>
         
         {/* Feature Pills */}

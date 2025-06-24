@@ -16,7 +16,7 @@ const BlogPostTop5ReasonsOnlineOCR = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.pictotextonline.com/blog/top-5-reasons-online-ocr-business" />
         <meta property="og:image" content="https://www.pictotextonline.com/assets/online-ocr-business.jpg" />
-        <link rel="canonical" href="https://www.pictotextonline.com/blog/top-5-reasons-online-ocr-business" />
+        <link rel="canonical" href="https://pictotextonline.com/blog/top-5-reasons-to-use-online-ocr-tools-for-your-business" />
       </Helmet>
 
       {/* Animated Background Elements */}

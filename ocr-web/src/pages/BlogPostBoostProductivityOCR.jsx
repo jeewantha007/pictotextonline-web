@@ -140,7 +140,7 @@ const BlogPostBoostProductivityOCR = () => {
           content="AI OCR, productivity, image to text, OCR tools, digital transformation, boost productivity, AI technology, document conversion, text extraction, workflow automation" 
         />
         <meta name="author" content="PictoTextOnline Team" />
-        <link rel="canonical" href="https://www.pictotextonline.com/blog/boost-productivity-ocr" />
+        <link rel="canonical" href="https://pictotextonline.com/blog/boost-productivity-using-ai" />
 
         {/* Open Graph tags */}
         <meta property="og:title" content="Boost Productivity Using AI-Powered OCR Tools | PictoTextOnline" />

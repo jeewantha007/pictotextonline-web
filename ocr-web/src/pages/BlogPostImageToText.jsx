@@ -71,8 +71,9 @@ const BlogPostImageToText = () => {
           content="Instantly transform images and scanned documents into editable text with PictoTextOnline's free AI OCR service."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.pictotextonline.com" />
-        <meta property="og:image" content="https://www.pictotextonline.com/og-image.png" />
+        <meta property="og:url" content="https://pictotextonline.com/blog/how-to-extract-text-from-image" />
+        <meta property="og:image" content="https://pictotextonline.com/og-image.png" />
+        <link rel="canonical" href="https://pictotextonline.com/blog/how-to-extract-text-from-image" />
       </Helmet>
 
       {/* Hero Section */}

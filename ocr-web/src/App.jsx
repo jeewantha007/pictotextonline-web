@@ -10,6 +10,8 @@ import ScrollToTop from "./components/ScrollToTop";
 import BlogPostImageToText from "./pages/BlogPostImageToText";
 import BlogPostBoostProductivityOCR from "./pages/BlogPostBoostProductivityOCR";
 import BlogPostTop5ReasonsOnlineOCR from "./pages/BlogPostTop5ReasonsOnlineOCR";
+import GrammarChecker from "./pages/GrammarChecker";
+import WordCounter from "./pages/WordCounter";
 
 function App() {
   return (
@@ -19,6 +21,8 @@ function App() {
       <main className="min-h-[80vh]">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/grammar-checker" element={<GrammarChecker />} />
+           <Route path="/words-counter" element={<WordCounter />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

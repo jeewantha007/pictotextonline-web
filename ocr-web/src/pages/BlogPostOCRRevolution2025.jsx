@@ -15,7 +15,7 @@ const BlogPostOCRRevolution2025 = () => {
         <meta property="og:type" content="article" />
         <meta property="og:url" content="https://www.pictotextonline.com/blog/ocr-revolution-2025" />
         <meta property="og:image" content="https://www.pictotextonline.com/assets/ocr-revolution-2025.jpg" />
-        <link rel="canonical" href="https://www.pictotextonline.com/blog/ocr-revolution-2025" />
+        <link rel="canonical" href="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
       </Helmet>
      
 

@@ -3,54 +3,71 @@
   xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml"
 >
+  <!-- Main Pages -->
   <url>
-    <loc>https://www.pictotextonline.com/</loc>
+    <loc>https://pictotextonline.com/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.pictotextonline.com/about</loc>
+    <loc>https://pictotextonline.com/about</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://www.pictotextonline.com/contact</loc>
+    <loc>https://pictotextonline.com/contact</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://www.pictotextonline.com/privacy-policy</loc>
+    <loc>https://pictotextonline.com/privacy-policy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://www.pictotextonline.com/terms-of-use</loc>
+    <loc>https://pictotextonline.com/terms-of-use</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
-  <!-- Blog posts -->
+  <!-- Tools Pages -->
   <url>
-    <loc>https://www.pictotextonline.com/blog/how-to-extract-text-from-image</loc>
+    <loc>https://pictotextonline.com/grammar-checker</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <url>
+    <loc>https://pictotextonline.com/words-counter</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+
+  <!-- Blog Posts -->
+  <url>
+    <loc>https://pictotextonline.com/blog/how-to-extract-text-from-image</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.pictotextonline.com/blog/Boost-Productivity-Using-AI</loc>
+    <loc>https://pictotextonline.com/blog/boost-productivity-using-ai</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.pictotextonline.com/blog/top-5-reasons-to-use-online-ocr-tools-for-your-business</loc>
+    <loc>https://pictotextonline.com/blog/top-5-reasons-to-use-online-ocr-tools-for-your-business</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
   <url>
-    <loc>https://www.pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025</loc>
+    <loc>https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

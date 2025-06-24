@@ -139,7 +139,7 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Header Section */}
-      <Header />
+      <Header title={'Image to Text Converter'} des={'An online image to text converter to extract text from images.'}/>
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12 lg:pb-20">
