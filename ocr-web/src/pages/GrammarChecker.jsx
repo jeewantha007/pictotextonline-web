@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Grammar from '../components/Grammar';
 import Format from '../components/Format';
 import Header from '../components/Header';
+import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const GrammarChecker = () => {
   const [inputText, setInputText] = useState('');
@@ -145,6 +147,22 @@ const GrammarChecker = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <Helmet>
+        <title>Grammar Checker | Free Online Grammar & Spelling Tool - PictoTextOnline</title>
+        <meta name="description" content="Check your text for grammar and spelling errors with PictoTextOnline's free online grammar checker. Instantly fix punctuation, style, and spelling for essays, business writing, and more. Fast, accurate, and privacy-friendly." />
+        <meta name="keywords" content="grammar checker, spelling checker, free online tool, grammar correction, PictoTextOnline, fix punctuation, essay grammar checker, business writing checker, style checker, writing tool, student writing tool, professional grammar tool, content editing, text proofreading" />
+        <meta property="og:title" content="Grammar Checker | Free Online Grammar & Spelling Tool - PictoTextOnline" />
+        <meta property="og:description" content="Check your text for grammar and spelling errors with PictoTextOnline's free online grammar checker. Fast, accurate, and privacy-friendly." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pictotextonline.com/grammar-checker" />
+        <meta property="og:image" content="https://pictotextonline.com/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Grammar Checker | Free Online Grammar & Spelling Tool - PictoTextOnline" />
+        <meta name="twitter:description" content="Check your text for grammar and spelling errors with PictoTextOnline's free online grammar checker. Fast, accurate, and privacy-friendly." />
+        <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
+        <link rel="canonical" href="https://pictotextonline.com/grammar-checker" />
+      </Helmet>
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Grammar Checker', path: '/grammar-checker' }]} />
       {/* Header Section */}
       <Header title={'Grammar Checker'} des={'An online grammar checker to fix grammar, spelling, and punctuation mistakes instantly.'}/>
 

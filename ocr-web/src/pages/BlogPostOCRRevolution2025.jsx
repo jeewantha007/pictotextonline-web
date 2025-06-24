@@ -1,5 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogPostOCRRevolution2025 = () => {
   return (
@@ -8,16 +9,21 @@ const BlogPostOCRRevolution2025 = () => {
       
       <Helmet>
         <title>How Online OCR Tools Are Revolutionizing Document Management in 2025 | PictoTextOnline</title>
-        <meta name="description" content="Explore how online OCR tools are transforming document management in 2025 with improved efficiency, accuracy, and accessibility." />
-        <meta name="keywords" content="OCR 2025, online OCR tools, document management, AI OCR, digital transformation" />
+        <meta name="description" content="Explore how online OCR tools are transforming document management in 2025 with improved efficiency, accuracy, accessibility, and support for scanned PDFs, business cards, and handwritten notes." />
+        <meta name="keywords" content="OCR 2025, online OCR tools, document management, AI OCR, digital transformation, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
         <meta property="og:title" content="How Online OCR Tools Are Revolutionizing Document Management in 2025" />
         <meta property="og:description" content="Learn how AI-powered online OCR tools are changing the way businesses handle documents in 2025." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.pictotextonline.com/blog/ocr-revolution-2025" />
-        <meta property="og:image" content="https://www.pictotextonline.com/assets/ocr-revolution-2025.jpg" />
+        <meta property="og:url" content="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
+        <meta property="og:image" content="https://pictotextonline.com/assets/ocr-revolution-2025.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="How Online OCR Tools Are Revolutionizing Document Management in 2025" />
+        <meta name="twitter:description" content="Learn how AI-powered online OCR tools are changing the way businesses handle documents in 2025." />
+        <meta name="twitter:image" content="https://pictotextonline.com/assets/ocr-revolution-2025.jpg" />
         <link rel="canonical" href="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
       </Helmet>
      
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }, { name: 'OCR Revolution 2025', path: '/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025' }]} />
 
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -216,6 +222,41 @@ const BlogPostOCRRevolution2025 = () => {
          
         </article>
       </div>
+
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "How Online OCR Tools Are Revolutionizing Document Management in 2025",
+          "description": "Explore how online OCR tools are transforming document management in 2025 with improved efficiency, accuracy, and accessibility.",
+          "author": {
+            "@type": "Organization",
+            "name": "PictoTextOnline Team"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "PictoTextOnline",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://pictotextonline.com/favicon.png"
+            }
+          },
+          "datePublished": "2025-06-01",
+          "dateModified": "2025-06-01",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025"
+          },
+          "image": {
+            "@type": "ImageObject",
+            "url": "https://pictotextonline.com/assets/ocr-revolution-2025.jpg",
+            "width": 1200,
+            "height": 630
+          },
+          "articleSection": "Technology",
+          "keywords": "OCR 2025, online OCR tools, document management, AI OCR, digital transformation"
+        })}
+      </script>
     </div>
   );
 };

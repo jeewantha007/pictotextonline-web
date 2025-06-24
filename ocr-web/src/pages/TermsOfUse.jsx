@@ -1,5 +1,7 @@
 import React from 'react';
 import { FileText, Users, Shield, AlertCircle, Scale, Crown, Gavel, Clock } from 'lucide-react';
+import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const TermsOfUse = () => {
   const sections = [
@@ -61,6 +63,22 @@ const TermsOfUse = () => {
 
   return (
     <section className="relative max-w-5xl mx-auto px-6 py-20 overflow-hidden">
+      <Helmet>
+        <title>Terms of Use | PictoTextOnline</title>
+        <meta name="description" content="Read the terms of use for PictoTextOnline. Understand your rights and responsibilities when using our free AI image to text converter for scanned PDFs, receipts, business cards, and handwritten notes." />
+        <meta name="keywords" content="terms of use, PictoTextOnline, user agreement, legal, AI OCR, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
+        <meta property="og:title" content="Terms of Use | PictoTextOnline" />
+        <meta property="og:description" content="Read the terms of use for PictoTextOnline. Understand your rights and responsibilities when using our free AI image to text converter." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pictotextonline.com/terms-of-use" />
+        <meta property="og:image" content="https://pictotextonline.com/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Terms of Use | PictoTextOnline" />
+        <meta name="twitter:description" content="Read the terms of use for PictoTextOnline. Understand your rights and responsibilities when using our free AI image to text converter." />
+        <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
+        <link rel="canonical" href="https://pictotextonline.com/terms-of-use" />
+      </Helmet>
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Terms of Use', path: '/terms-Of-use' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-orange-100 to-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-100 to-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>

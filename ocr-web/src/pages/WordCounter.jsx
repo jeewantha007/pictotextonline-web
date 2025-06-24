@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
+import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const WordCounter = () => {
   const [text, setText] = useState('');
@@ -141,6 +143,22 @@ const WordCounter = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <Helmet>
+        <title>Word Counter | Free Online Text Analysis Tool - PictoTextOnline</title>
+        <meta name="description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, paragraphs, reading time, and more. Perfect for students, writers, and professionals. No signup required." />
+        <meta name="keywords" content="word counter, text analysis, free online tool, character count, sentence count, PictoTextOnline, text statistics, reading time calculator, writing tool, student writing tool, professional writing tool, essay checker, content analysis, document analysis" />
+        <meta property="og:title" content="Word Counter | Free Online Text Analysis Tool - PictoTextOnline" />
+        <meta property="og:description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, paragraphs, and more. No signup required." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pictotextonline.com/words-counter" />
+        <meta property="og:image" content="https://pictotextonline.com/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Word Counter | Free Online Text Analysis Tool - PictoTextOnline" />
+        <meta name="twitter:description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, paragraphs, and more. No signup required." />
+        <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
+        <link rel="canonical" href="https://pictotextonline.com/words-counter" />
+      </Helmet>
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Word Counter', path: '/words-counter' }]} />
       {/* Header Section */}
       <Header title={'Word & Character Counter'} des={'A simple tool to count words, characters, sentences, and paragraphs in your text.'}/>
 

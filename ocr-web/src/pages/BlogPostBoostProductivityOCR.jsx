@@ -22,6 +22,7 @@ import {
   Play
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogPostBoostProductivityOCR = () => {
   const [animatedStats, setAnimatedStats] = useState([0, 0, 0]);
@@ -133,11 +134,11 @@ const BlogPostBoostProductivityOCR = () => {
         <title>Boost Productivity Using AI-Powered OCR Tools | PictoTextOnline</title>
         <meta
           name="description"
-          content="Discover how AI-powered OCR tools can help you boost productivity by quickly converting images and documents into editable text. Learn benefits, tips, and best practices."
+          content="Discover how AI-powered OCR tools can help you boost productivity by quickly converting images, scanned PDFs, business cards, and handwritten notes into editable text. Learn benefits, tips, and best practices for digital document workflow, data extraction, and more."
         />
         <meta 
           name="keywords" 
-          content="AI OCR, productivity, image to text, OCR tools, digital transformation, boost productivity, AI technology, document conversion, text extraction, workflow automation" 
+          content="AI OCR, productivity, image to text, OCR tools, digital transformation, boost productivity, AI technology, document conversion, text extraction, workflow automation, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" 
         />
         <meta name="author" content="PictoTextOnline Team" />
         <link rel="canonical" href="https://pictotextonline.com/blog/boost-productivity-using-ai" />
@@ -149,9 +150,9 @@ const BlogPostBoostProductivityOCR = () => {
           content="Transform your workflow with revolutionary OCR technology. Convert images and documents into editable text instantly, saving hours of manual work." 
         />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://www.pictotextonline.com/blog/boost-productivity-ocr" />
+        <meta property="og:url" content="https://pictotextonline.com/blog/boost-productivity-using-ai" />
         <meta property="og:site_name" content="PictoTextOnline" />
-        <meta property="og:image" content="https://www.pictotextonline.com/assets/boost-productivity-ocr.jpg" />
+        <meta property="og:image" content="https://pictotextonline.com/assets/boost-productivity-ocr.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta property="og:locale" content="en_US" />
@@ -165,7 +166,7 @@ const BlogPostBoostProductivityOCR = () => {
           name="twitter:description" 
           content="Transform your workflow with AI-powered OCR. Convert images to text instantly and boost productivity by 85%." 
         />
-        <meta name="twitter:image" content="https://www.pictotextonline.com/assets/boost-productivity-ocr.jpg" />
+        <meta name="twitter:image" content="https://pictotextonline.com/assets/boost-productivity-ocr.jpg" />
 
         {/* Additional SEO tags */}
         <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
@@ -179,7 +180,7 @@ const BlogPostBoostProductivityOCR = () => {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
-            "headline": "How to Boost Productivity Using AI-Powered OCR Tools",
+            "headline": "Boost Productivity Using AI-Powered OCR Tools",
             "description": "Discover how AI-powered OCR tools can help you boost productivity by quickly converting images and documents into editable text. Learn benefits, tips, and best practices.",
             "author": {
               "@type": "Organization",
@@ -190,18 +191,18 @@ const BlogPostBoostProductivityOCR = () => {
               "name": "PictoTextOnline",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://www.pictotextonline.com/logo.png"
+                "url": "https://pictotextonline.com/favicon.png"
               }
             },
-            "datePublished": new Date().toISOString().split('T')[0],
-            "dateModified": new Date().toISOString().split('T')[0],
+            "datePublished": "2025-06-01",
+            "dateModified": "2025-06-01",
             "mainEntityOfPage": {
               "@type": "WebPage",
-              "@id": "https://www.pictotextonline.com/blog/boost-productivity-ocr"
+              "@id": "https://pictotextonline.com/blog/boost-productivity-using-ai"
             },
             "image": {
               "@type": "ImageObject",
-              "url": "https://www.pictotextonline.com/assets/boost-productivity-ocr.jpg",
+              "url": "https://pictotextonline.com/assets/boost-productivity-ocr.jpg",
               "width": 1200,
               "height": 630
             },
@@ -210,6 +211,8 @@ const BlogPostBoostProductivityOCR = () => {
           })}
         </script>
       </Helmet>
+
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }, { name: 'Boost Productivity Using AI', path: '/blog/boost-productivity-using-ai' }]} />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}

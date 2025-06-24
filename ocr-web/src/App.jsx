@@ -12,6 +12,7 @@ import BlogPostBoostProductivityOCR from "./pages/BlogPostBoostProductivityOCR";
 import BlogPostTop5ReasonsOnlineOCR from "./pages/BlogPostTop5ReasonsOnlineOCR";
 import GrammarChecker from "./pages/GrammarChecker";
 import WordCounter from "./pages/WordCounter";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
              <Route path="/blog/Boost-Productivity-Using-AI" element={<BlogPostBoostProductivityOCR />} />
               <Route path="/blog/top-5-reasons-to-use-online-ocr-tools-for-your-business" element={<BlogPostTop5ReasonsOnlineOCR />} />
                <Route path="/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" element={<BlogPostTop5ReasonsOnlineOCR />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
       <Footer />
