@@ -12,8 +12,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          path: .
 
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -28,24 +26,24 @@ jobs:
       # Build Frontend
       - name: List frontend files
         run: |
-          cd ocr-web
+          cd pictotextonline-web/ocr-web
           pwd
           ls -l
       - name: Build frontend
         run: |
-          cd ocr-web
+          cd pictotextonline-web/ocr-web
           npm install
           npm run build
 
       # Build Backend
       - name: List backend files
         run: |
-          cd ocr-web-backend
+          cd pictotextonline-web/ocr-web-backend
           pwd
           ls -l
       - name: Build backend
         run: |
-          cd ocr-web-backend
+          cd pictotextonline-web/ocr-web-backend
           npm install
 
       # Copy Frontend build to EC2
@@ -55,7 +53,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "ocr-web/dist/*"
+          source: "pictotextonline-web/ocr-web/dist/*"
           target: "/home/ubuntu/PicToText-frontend"
 
       # Copy Backend to EC2
@@ -65,7 +63,7 @@ jobs:
           host: ${{ secrets.EC2_HOST }}
           username: ${{ secrets.EC2_USER }}
           key: ${{ secrets.EC2_SSH_KEY }}
-          source: "ocr-web-backend/*"
+          source: "pictotextonline-web/ocr-web-backend/*"
           target: "/home/ubuntu/PicToTextOnline"
 
       # SSH into EC2 and restart backend
