@@ -1,7 +1,6 @@
 import React from 'react';
 import { FileText, Users, Shield, AlertCircle, Scale, Crown, Gavel, Clock } from 'lucide-react';
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const TermsOfUse = () => {
   const sections = [
@@ -78,7 +77,6 @@ const TermsOfUse = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/terms-of-use" />
       </Helmet>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Terms of Use', path: '/terms-Of-use' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-orange-100 to-red-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-100 to-orange-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>

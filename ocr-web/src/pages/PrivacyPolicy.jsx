@@ -1,7 +1,6 @@
 import React from 'react';
 import { Shield, Eye, Lock, Globe, FileText, Clock } from 'lucide-react';
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -72,7 +71,6 @@ const PrivacyPolicy = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/privacy-policy" />
       </Helmet>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Privacy Policy', path: '/privacy-policy' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-green-100 to-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>

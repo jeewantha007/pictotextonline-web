@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Mail, MessageCircle, Send, CheckCircle, User, AtSign, Heart } from 'lucide-react';
 import emailjs from 'emailjs-com';
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -87,7 +86,6 @@ const Contact = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/contact" />
       </Helmet>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-100 to-cyan-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
