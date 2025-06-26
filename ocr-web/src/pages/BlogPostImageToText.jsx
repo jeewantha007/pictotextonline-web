@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Eye, Zap, Shield, Download, CheckCircle, ArrowRight, FileText, Camera, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogPostImageToText = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -61,9 +62,9 @@ const BlogPostImageToText = () => {
         <title>Convert Images to Text with AI-Powered OCR | PictoTextOnline</title>
         <meta
           name="description"
-          content="Convert any image or scanned document to editable text instantly with PictoTextOnline's free AI-powered OCR. Supports handwritten and typed text."
+          content="Convert any image, scanned PDF, screenshot, or handwritten note to editable text instantly with PictoTextOnline's free AI-powered OCR. Extract text from receipts, business cards, forms, and more. Supports multiple languages and handwriting recognition."
         />
-        <meta name="keywords" content="image to text, OCR, handwritten text recognition, free OCR, PictoTextOnline" />
+        <meta name="keywords" content="image to text, OCR, handwritten text recognition, free OCR, PictoTextOnline, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, extract text from forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
         <meta name="author" content="PictoTextOnline" />
         <meta property="og:title" content="Convert Images to Text with AI-Powered OCR | PictoTextOnline" />
         <meta
@@ -71,9 +72,78 @@ const BlogPostImageToText = () => {
           content="Instantly transform images and scanned documents into editable text with PictoTextOnline's free AI OCR service."
         />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.pictotextonline.com" />
-        <meta property="og:image" content="https://www.pictotextonline.com/og-image.png" />
+        <meta property="og:url" content="https://pictotextonline.com/blog/how-to-extract-text-from-image" />
+        <meta property="og:image" content="https://pictotextonline.com/og-image.png" />
+        <link rel="canonical" href="https://pictotextonline.com/blog/how-to-extract-text-from-image" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Convert Images to Text with AI-Powered OCR | PictoTextOnline",
+            "description": "Convert any image or scanned document to editable text instantly with PictoTextOnline's free AI-powered OCR. Supports handwritten and typed text.",
+            "author": {
+              "@type": "Organization",
+              "name": "PictoTextOnline Team"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "PictoTextOnline",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://pictotextonline.com/favicon.png"
+              }
+            },
+            "datePublished": "2025-06-01",
+            "dateModified": "2025-06-01",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://pictotextonline.com/blog/how-to-extract-text-from-image"
+            },
+            "image": {
+              "@type": "ImageObject",
+              "url": "https://pictotextonline.com/og-image.png",
+              "width": 1200,
+              "height": 630
+            },
+            "articleSection": "Technology",
+            "keywords": "image to text, OCR, handwritten text recognition, free OCR, PictoTextOnline"
+          })}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What formats does the image to text converter support?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "PictoTextOnline supports JPG, PNG, BMP, and PDF files."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is PictoTextOnline free to use?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our image to text converter is completely free with no signup required."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I convert handwritten text?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, PictoTextOnline uses advanced AI OCR to extract both typed and handwritten text."
+                }
+              }
+            ]
+          })}
+        </script>
       </Helmet>
+
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }, { name: 'How to Extract Text from Image', path: '/blog/how-to-extract-text-from-image' }]} />
 
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700" role="banner">
@@ -267,42 +337,20 @@ const BlogPostImageToText = () => {
                 <button
                   onClick={() => toggleFaq(index)}
                   aria-expanded={openFaq === index}
-                  aria-controls={`faq-panel-${index}`}
-                  id={`faq-header-${index}`}
-                  className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-slate-50 transition-colors duration-200"
+                  aria-controls={`faq-${index}`}
+                  className="flex items-center justify-between w-full p-4 text-left text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
                 >
-                  <span className="font-semibold text-lg text-gray-800">{faq.question}</span>
-                  <div className={`transform transition-transform duration-200 ${openFaq === index ? 'rotate-180' : ''}`}>
-                    <ArrowRight className="w-5 h-5 text-gray-400 rotate-90" aria-hidden="true" />
-                  </div>
+                  <span className="font-semibold">{faq.question}</span>
+                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} aria-hidden="true" />
                 </button>
-                {openFaq === index && (
-                  <div
-                    id={`faq-panel-${index}`}
-                    role="region"
-                    aria-labelledby={`faq-header-${index}`}
-                    className="px-6 pb-4"
-                  >
-                    <p className="text-gray-600">{faq.answer}</p>
-                  </div>
-                )}
+                <div
+                  id={`faq-${index}`}
+                  className={`${openFaq === index ? 'block' : 'hidden'} p-4`}
+                  role="region">
+                  <p className="text-gray-600">{faq.answer}</p>
+                </div>
               </article>
             ))}
-          </div>
-        </section>
-
-        {/* Call to Action */}
-        <section className="text-center">
-          <div className="bg-gradient-to-r from-orange-400 to-pink-500 rounded-2xl p-8 text-white">
-            <h2 className="text-3xl font-bold mb-4">Ready to Convert Your Images?</h2>
-            <p className="text-lg mb-8 opacity-90 max-w-xl mx-auto">
-              Try PictoTextOnline now and unlock the power of AI OCR for free.
-            </p>
-            <Link to='/'>
-            <button className="bg-white text-pink-600 px-10 py-4 rounded-full font-semibold hover:bg-pink-50 transition-all duration-300 shadow-lg" style={{cursor:'pointer'}}>
-              Start Now
-            </button>
-            </Link>
           </div>
         </section>
       </main>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Shield, Eye, Lock, Globe, FileText, Clock } from 'lucide-react';
+import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const PrivacyPolicy = () => {
   const sections = [
@@ -55,6 +57,22 @@ const PrivacyPolicy = () => {
 
   return (
     <section className="relative max-w-5xl mx-auto px-6 py-20 overflow-hidden">
+      <Helmet>
+        <title>Privacy Policy | PictoTextOnline</title>
+        <meta name="description" content="Read PictoTextOnline's privacy policy. Learn how we protect your data and ensure your privacy when using our free AI image to text converter for scanned PDFs, receipts, business cards, and handwritten notes." />
+        <meta name="keywords" content="privacy policy, data protection, PictoTextOnline, user privacy, AI OCR, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
+        <meta property="og:title" content="Privacy Policy | PictoTextOnline" />
+        <meta property="og:description" content="Read PictoTextOnline's privacy policy. Learn how we protect your data and ensure your privacy when using our free AI image to text converter." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pictotextonline.com/privacy-policy" />
+        <meta property="og:image" content="https://pictotextonline.com/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy | PictoTextOnline" />
+        <meta name="twitter:description" content="Read PictoTextOnline's privacy policy. Learn how we protect your data and ensure your privacy when using our free AI image to text converter." />
+        <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
+        <link rel="canonical" href="https://pictotextonline.com/privacy-policy" />
+      </Helmet>
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Privacy Policy', path: '/privacy-policy' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-green-100 to-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-100 to-pink-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>

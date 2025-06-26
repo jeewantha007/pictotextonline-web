@@ -9,6 +9,8 @@ import Header from '../components/Header';
 import FileInfoDisplay from '../components/FileInfoDisplay';
 import ProcessingStats from '../components/ProcessingStats';
 import BlogSection from '../components/BlogSection';
+import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const Home = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -138,8 +140,24 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
+      <Helmet>
+        <title>AI Image to Text Converter | Free Online OCR for Handwriting & Photos - PictoTextOnline</title>
+        <meta name="description" content="Convert images, scanned PDFs, screenshots, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Extract text from receipts, business cards, forms, and more—no signup needed. Fast, accurate, secure, and supports multiple languages." />
+        <meta name="keywords" content="image to text, free ocr, online ocr, handwriting to text, convert image to text, extract text from image, AI OCR, scanned document to text, screenshot to text, PictoTextOnline, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, extract text from forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
+        <meta property="og:title" content="AI Image to Text Converter | Free Online OCR for Handwriting & Photos - PictoTextOnline" />
+        <meta property="og:description" content="Convert images, scanned PDFs, screenshots, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Extract text from receipts, business cards, forms, and more—no signup needed. Fast, accurate, secure, and supports multiple languages." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pictotextonline.com/" />
+        <meta property="og:image" content="https://pictotextonline.com/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="AI Image to Text Converter | Free Online OCR for Handwriting & Photos - PictoTextOnline" />
+        <meta name="twitter:description" content="Convert images, scanned PDFs, screenshots, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Extract text from receipts, business cards, forms, and more—no signup needed. Fast, accurate, secure, and supports multiple languages." />
+        <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
+        <link rel="canonical" href="https://pictotextonline.com/" />
+      </Helmet>
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }]} />
       {/* Header Section */}
-      <Header />
+      <Header title={'Image to Text Converter'} des={'An online image to text converter to extract text from images.'}/>
 
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12 lg:pb-20">

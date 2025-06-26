@@ -1,5 +1,7 @@
 import React from 'react';
 import { Eye, Zap, Shield, Globe } from 'lucide-react';
+import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const About = () => {
   const features = [
@@ -27,6 +29,22 @@ const About = () => {
 
   return (
     <section className="relative max-w-6xl mx-auto px-6 py-20 overflow-hidden">
+      <Helmet>
+        <title>About PictoTextOnline | Free AI Image to Text Converter</title>
+        <meta name="description" content="Learn about PictoTextOnline, the free AI-powered image to text converter for scanned PDFs, receipts, business cards, and handwritten notes. Discover our mission, technology, and privacy-first approach to digital document workflow." />
+        <meta name="keywords" content="about PictoTextOnline, image to text, AI OCR, privacy, technology, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
+        <meta property="og:title" content="About PictoTextOnline | Free AI Image to Text Converter" />
+        <meta property="og:description" content="Learn about PictoTextOnline, our mission, and our privacy-first AI OCR technology." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pictotextonline.com/about" />
+        <meta property="og:image" content="https://pictotextonline.com/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="About PictoTextOnline | Free AI Image to Text Converter" />
+        <meta name="twitter:description" content="Learn about PictoTextOnline, our mission, and our privacy-first AI OCR technology." />
+        <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
+        <link rel="canonical" href="https://pictotextonline.com/about" />
+      </Helmet>
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-yellow-100 to-pink-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>

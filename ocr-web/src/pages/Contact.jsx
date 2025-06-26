@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Mail, MessageCircle, Send, CheckCircle, User, AtSign, Heart } from 'lucide-react';
 import emailjs from 'emailjs-com';
+import { Helmet } from "react-helmet";
+import Breadcrumbs from '../components/Breadcrumbs';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -70,6 +72,22 @@ const Contact = () => {
 
   return (
     <section className="relative max-w-6xl mx-auto px-6 py-20 overflow-hidden">
+      <Helmet>
+        <title>Contact Us | PictoTextOnline</title>
+        <meta name="description" content="Contact PictoTextOnline for support, feedback, partnership inquiries, or help with converting images, scanned PDFs, and handwritten notes to text. Fast, friendly, and privacy-focused support for all your OCR needs." />
+        <meta name="keywords" content="contact, support, PictoTextOnline, feedback, help, OCR support, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
+        <meta property="og:title" content="Contact Us | PictoTextOnline" />
+        <meta property="og:description" content="Contact PictoTextOnline for support, feedback, or partnership inquiries. Fast, friendly, and privacy-focused support." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://pictotextonline.com/contact" />
+        <meta property="og:image" content="https://pictotextonline.com/preview.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Us | PictoTextOnline" />
+        <meta name="twitter:description" content="Contact PictoTextOnline for support, feedback, or partnership inquiries. Fast, friendly, and privacy-focused support." />
+        <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
+        <link rel="canonical" href="https://pictotextonline.com/contact" />
+      </Helmet>
+      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Contact', path: '/contact' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-cyan-100 to-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-purple-100 to-cyan-100 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
