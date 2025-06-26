@@ -18,7 +18,17 @@ jobs:
         with:
           node-version: '18'
 
+      - name: Show working directory and files (root)
+        run: |
+          pwd
+          ls -l
+
       # Build Frontend
+      - name: List frontend files
+        run: |
+          cd ocr-web
+          pwd
+          ls -l
       - name: Build frontend
         run: |
           cd ocr-web
@@ -26,6 +36,11 @@ jobs:
           npm run build
 
       # Build Backend
+      - name: List backend files
+        run: |
+          cd ocr-web-backend
+          pwd
+          ls -l
       - name: Build backend
         run: |
           cd ocr-web-backend
