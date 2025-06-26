@@ -1,88 +1,39 @@
-name: Deploy Frontend and Backend to EC2
+name: Debug - Find Directory Structure
 
 on:
   push:
     branches:
-      - main  # or your deployment branch
+      - main
 
 jobs:
-  build-and-deploy:
+  debug:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18'
-
-      - name: Show working directory and files (root)
+      - name: Debug repository structure
         run: |
+          echo "=== Current working directory ==="
           pwd
+          
+          echo "=== Files and directories in root ==="
           ls -la
-          echo "Repository structure:"
-          find . -type d -name "node_modules" -prune -o -type d -print | head -20
-
-      # Build frontend
-      - name: Build frontend
-        run: |
-          cd ${{ steps.paths.outputs.frontend_path }}
-          pwd && ls -la
-          npm install
-          npm run build
-
-      # Build backend
-      - name: Build backend  
-        run: |
-          cd ${{ steps.paths.outputs.backend_path }}
-          pwd && ls -la
-          npm install
-
-      # Set environment variables for paths
-      - name: Set paths
-        id: paths
-        run: |
-          if [ -d "ocr-web" ]; then
-            echo "frontend_path=ocr-web" >> $GITHUB_OUTPUT
-            echo "backend_path=ocr-web-backend" >> $GITHUB_OUTPUT
-          elif [ -d "pictotextonline-web/ocr-web" ]; then
-            echo "frontend_path=pictotextonline-web/ocr-web" >> $GITHUB_OUTPUT
-            echo "backend_path=pictotextonline-web/ocr-web-backend" >> $GITHUB_OUTPUT
-          else
-            echo "Error: Could not find frontend/backend directories"
-            exit 1
-          fi
-
-      # Copy Frontend build to EC2
-      - name: Copy frontend to EC2
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          source: "${{ steps.paths.outputs.frontend_path }}/dist/*"
-          target: "/home/ubuntu/PicToText-frontend"
-
-      # Copy Backend to EC2
-      - name: Copy backend to EC2
-        uses: appleboy/scp-action@v0.1.7
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          source: "${{ steps.paths.outputs.backend_path }}/*"
-          target: "/home/ubuntu/PicToTextOnline"
-
-      # SSH into EC2 and restart backend
-      - name: Restart backend with PM2
-        uses: appleboy/ssh-action@v0.1.10
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ${{ secrets.EC2_USER }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            cd /home/ubuntu/PicToTextOnline
-            npm install --production
-            pm2 restart PicToTextOnline || pm2 start index.js --name PicToTextOnline
+          
+          echo "=== All directories (max depth 3) ==="
+          find . -maxdepth 3 -type d | grep -v .git | sort
+          
+          echo "=== All package.json files ==="
+          find . -name "package.json" -type f
+          
+          echo "=== Looking for common frontend/backend patterns ==="
+          find . -maxdepth 2 -type d | grep -iE "(web|frontend|client|ui|app|ocr)" | head -10
+          find . -maxdepth 2 -type d | grep -iE "(backend|server|api)" | head -10
+          
+          echo "=== Contents of any package.json files ==="
+          for pkg in $(find . -name "package.json" -type f); do
+            echo "--- $pkg ---"
+            head -20 "$pkg"
+            echo ""
+          done
