@@ -334,4 +334,34 @@ const BlogPostImageToText = () => {
                 <button
                   onClick={() => toggleFaq(index)}
                   aria-expanded={openFaq === index}
-                  aria-controls={`
+                  aria-controls={`faq-panel-${index}`}
+                >
+                  <div className="flex items-center justify-between w-full px-6 py-5 text-left">
+                    <span className="text-lg font-semibold text-gray-900">{faq.question}</span>
+                    <svg
+                      className={`w-5 h-5 ml-4 transition-transform duration-300 ${openFaq === index ? 'transform rotate-180' : ''}`}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
+                </button>
+                <div
+                  id={`faq-panel-${index}`}
+                  className={`px-6 pb-6 transition-all duration-300 ease-in-out text-gray-700 text-base ${openFaq === index ? 'block' : 'hidden'}`}
+                  aria-hidden={openFaq !== index}
+                >
+                  {faq.answer}
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+};
+
+export default BlogPostImageToText;
