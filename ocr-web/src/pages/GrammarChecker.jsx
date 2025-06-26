@@ -35,10 +35,18 @@ const GrammarChecker = () => {
         setShowGrammarModal(true);
         setFeedbackMessage(`Found ${result.errors?.length || 0} grammar issues to review.`);
         setFeedbackType('info');
+        // Initialize processedText with original text if corrections are available
+        if (!hasProcessedText) {
+          setProcessedText(text);
+          setHasProcessedText(true);
+        }
       } else {
         setGrammarErrors(result);
         setFeedbackMessage('Great! No grammar errors found in your text.');
         setFeedbackType('success');
+        // Set processed text even when no errors found
+        setProcessedText(text);
+        setHasProcessedText(true);
       }
       
       // Clear message after 4 seconds
@@ -57,10 +65,27 @@ const GrammarChecker = () => {
     }
   };
 
+  // Handle text changes - key fix here
+  const handleTextChange = (e) => {
+    const newText = e.target.value;
+    
+    if (hasProcessedText) {
+      // If we're showing processed text, update it
+      setProcessedText(newText);
+    } else {
+      // If we're showing input text, update it
+      setInputText(newText);
+    }
+  };
+
+  // Get current text being displayed
+  const getCurrentText = () => {
+    return hasProcessedText ? processedText : inputText;
+  };
+
   // Copy text to clipboard
   const handleCopy = () => {
-    // Always prioritize processedText if available
-    const textToCopy = processedText && hasProcessedText ? processedText : inputText;
+    const textToCopy = getCurrentText();
     if (!textToCopy.trim()) {
       setFeedbackMessage('No text to copy.');
       setFeedbackType('info');
@@ -81,7 +106,7 @@ const GrammarChecker = () => {
 
   // Download text as file
   const handleDownload = () => {
-    const textToDownload = processedText || inputText;
+    const textToDownload = getCurrentText();
     if (!textToDownload.trim()) {
       setFeedbackMessage('No text to download.');
       setFeedbackType('info');
@@ -112,6 +137,13 @@ const GrammarChecker = () => {
     setShowGrammarModal(false);
     setFeedbackMessage('');
     setHasProcessedText(false);
+  };
+
+  // Switch back to editing mode
+  const handleEditOriginal = () => {
+    setHasProcessedText(false);
+    setGrammarErrors(null);
+    setShowGrammarModal(false);
   };
 
   // Subtle feedback component
@@ -162,6 +194,7 @@ const GrammarChecker = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/grammar-checker" />
       </Helmet>
+      
       {/* Header Section */}
       <Header title={'Grammar Checker'} des={'An online grammar checker to fix grammar, spelling, and punctuation mistakes instantly.'}/>
 
@@ -176,18 +209,31 @@ const GrammarChecker = () => {
           <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
             <div className="p-6 sm:p-8 lg:p-10">
               <div className="text-center mb-6 sm:mb-8">
-               
                 <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                   Paste or type your text below and our AI will check it for grammar, spelling, and style errors
                 </p>
               </div>
 
+              {/* Text Status Indicator */}
+              {hasProcessedText && (
+                <div className="mb-4 flex items-center justify-between bg-green-50 border border-green-200 rounded-lg px-4 py-2">
+                  <span className="text-green-800 text-sm font-medium">
+                    ✓ Showing grammar-checked text
+                  </span>
+                  <button
+                    onClick={handleEditOriginal}
+                    className="text-green-600 hover:text-green-800 text-sm font-medium underline"
+                  >
+                    Edit original
+                  </button>
+                </div>
+              )}
+
               {/* Text Input Area */}
               <div className="mb-6 sm:mb-8">
-                {/* Show processedText if available, else inputText */}
                 <textarea
-                  value={hasProcessedText && processedText ? processedText : inputText}
-                  onChange={(e) => setInputText(e.target.value)}
+                  value={getCurrentText()}
+                  onChange={handleTextChange}
                   placeholder="Paste or type your text here..."
                   className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400 bg-gray-50 hover:bg-white"
                   style={{
@@ -197,15 +243,15 @@ const GrammarChecker = () => {
                   }}
                 />
                 <div className="mt-2 text-sm text-gray-500 text-right">
-                  {(hasProcessedText && processedText ? processedText.length : inputText.length)} characters
+                  {getCurrentText().length} characters
                 </div>
               </div>
               
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <button
-                  onClick={() => handleGrammarCheck(inputText)}
-                  disabled={!inputText.trim() || grammarLoading}
+                  onClick={() => handleGrammarCheck(hasProcessedText ? processedText : inputText)}
+                  disabled={!getCurrentText().trim() || grammarLoading}
                   className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 disabled:from-gray-300 disabled:to-gray-400 text-white border-0 px-8 py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base min-w-[160px] flex items-center justify-center shadow-lg hover:shadow-xl disabled:cursor-not-allowed disabled:shadow-none"
                 >
                   {grammarLoading ? (
@@ -226,7 +272,7 @@ const GrammarChecker = () => {
                 {/* Copy Button */}
                 <button
                   onClick={handleCopy}
-                  disabled={!inputText.trim() && !processedText.trim()}
+                  disabled={!getCurrentText().trim()}
                   className="bg-green-500 hover:bg-green-600 disabled:bg-gray-300 text-white border-0 px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base min-w-[120px] flex items-center justify-center shadow-lg hover:shadow-xl disabled:cursor-not-allowed disabled:shadow-none"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -238,7 +284,7 @@ const GrammarChecker = () => {
                 {/* Download Button */}
                 <button
                   onClick={handleDownload}
-                  disabled={!inputText.trim() && !processedText.trim()}
+                  disabled={!getCurrentText().trim()}
                   className="bg-purple-500 hover:bg-purple-600 disabled:bg-gray-300 text-white border-0 px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base min-w-[120px] flex items-center justify-center shadow-lg hover:shadow-xl disabled:cursor-not-allowed disabled:shadow-none"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -285,6 +331,7 @@ const GrammarChecker = () => {
           setExtractedText={setProcessedText}
           setGrammarErrors={setGrammarErrors}
           setHasProcessedText={setHasProcessedText}
+          originalText={inputText} // Pass original text for reference
         />
 
         {/* Tips Section */}
