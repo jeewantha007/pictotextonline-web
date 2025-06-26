@@ -1,4 +1,4 @@
-name: Debug - Find Directory Structure
+name: Deploy Frontend and Backend to EC2
 
 on:
   push:
@@ -6,34 +6,79 @@ on:
       - main
 
 jobs:
-  debug:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Debug repository structure
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Verify repository structure
         run: |
-          echo "=== Current working directory ==="
-          pwd
-          
-          echo "=== Files and directories in root ==="
+          echo "Repository structure:"
           ls -la
-          
-          echo "=== All directories (max depth 3) ==="
-          find . -maxdepth 3 -type d | grep -v .git | sort
-          
-          echo "=== All package.json files ==="
-          find . -name "package.json" -type f
-          
-          echo "=== Looking for common frontend/backend patterns ==="
-          find . -maxdepth 2 -type d | grep -iE "(web|frontend|client|ui|app|ocr)" | head -10
-          find . -maxdepth 2 -type d | grep -iE "(backend|server|api)" | head -10
-          
-          echo "=== Contents of any package.json files ==="
-          for pkg in $(find . -name "package.json" -type f); do
-            echo "--- $pkg ---"
-            head -20 "$pkg"
-            echo ""
-          done
+          echo "Frontend directory contents:"
+          ls -la ocr-web/
+          echo "Backend directory contents:"
+          ls -la ocr-web-backend/
+
+      # Build Frontend
+      - name: Build frontend
+        run: |
+          cd ocr-web
+          echo "Installing frontend dependencies..."
+          npm install
+          echo "Building frontend..."
+          npm run build
+          echo "Build complete, checking output:"
+          ls -la
+
+      # Prepare Backend
+      - name: Prepare backend
+        run: |
+          cd ocr-web-backend
+          echo "Installing backend dependencies..."
+          npm install --production
+
+      # Copy Frontend to EC2
+      - name: Deploy frontend to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "ocr-web/dist/*"
+          target: "/home/ubuntu/PicToText-frontend/"
+          strip_components: 2
+
+      # Copy Backend to EC2
+      - name: Deploy backend to EC2
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          source: "ocr-web-backend/*"
+          target: "/home/ubuntu/PicToTextOnline/"
+          strip_components: 1
+
+      # Restart Backend Service
+      - name: Restart backend with PM2
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            cd /home/ubuntu/PicToTextOnline
+            echo "Installing production dependencies..."
+            npm install --production
+            echo "Restarting PM2 process..."
+            pm2 restart PicToTextOnline || pm2 start index.js --name PicToTextOnline
+            echo "PM2 status:"
+            pm2 status

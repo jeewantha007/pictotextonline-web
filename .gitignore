@@ -6,5 +6,4 @@
 *.crt
 *.cer
 *.pub
-*.json
 node_modules/
