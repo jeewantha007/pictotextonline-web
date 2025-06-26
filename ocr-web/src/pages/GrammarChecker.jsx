@@ -311,6 +311,7 @@ const GrammarChecker = () => {
           extractedText={processedText}
           setExtractedText={setProcessedText}
           setGrammarErrors={setGrammarErrors}
+          setHasProcessedText={setHasProcessedText}
         />
 
         {/* Tips Section */}

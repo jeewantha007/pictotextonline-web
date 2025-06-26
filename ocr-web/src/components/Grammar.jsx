@@ -6,7 +6,8 @@ const Grammar = ({
   setShowGrammarModal,
   extractedText,
   setExtractedText,
-  setGrammarErrors 
+  setGrammarErrors,
+  setHasProcessedText
 }) => {
   
   // Apply a single grammar fix
@@ -26,6 +27,7 @@ const Grammar = ({
 
     // Update the extracted text
     setExtractedText(newText);
+    if (setHasProcessedText) setHasProcessedText(true);
 
     // Mark this error as applied and adjust offsets for remaining errors
     const updatedErrors = grammarErrors.errors.map(err => {
@@ -68,6 +70,7 @@ const Grammar = ({
     });
 
     setExtractedText(newText);
+    if (setHasProcessedText) setHasProcessedText(true);
 
     // Mark all errors as applied
     const updatedErrors = grammarErrors.errors.map(err => ({
