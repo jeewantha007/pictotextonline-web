@@ -1,7 +1,6 @@
 import React from 'react';
 import { Eye, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const About = () => {
   const features = [
@@ -44,7 +43,6 @@ const About = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/about" />
       </Helmet>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'About', path: '/about' }]} />
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
       <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-to-br from-yellow-100 to-pink-100 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>

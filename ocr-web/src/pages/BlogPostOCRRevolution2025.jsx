@@ -1,6 +1,5 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogPostOCRRevolution2025 = () => {
   return (
@@ -23,8 +22,6 @@ const BlogPostOCRRevolution2025 = () => {
         <link rel="canonical" href="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
       </Helmet>
      
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }, { name: 'OCR Revolution 2025', path: '/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025' }]} />
-
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 left-20 w-64 h-64 bg-gradient-to-r from-blue-400/30 to-cyan-500/30 rounded-full blur-3xl animate-pulse"></div>

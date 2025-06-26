@@ -10,7 +10,6 @@ import FileInfoDisplay from '../components/FileInfoDisplay';
 import ProcessingStats from '../components/ProcessingStats';
 import BlogSection from '../components/BlogSection';
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const Home = () => {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -155,7 +154,6 @@ const Home = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/" />
       </Helmet>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }]} />
       {/* Header Section */}
       <Header title={'Image to Text Converter'} des={'An online image to text converter to extract text from images.'}/>
 

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const WordCounter = () => {
   const [text, setText] = useState('');
@@ -158,7 +157,6 @@ const WordCounter = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/words-counter" />
       </Helmet>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Word Counter', path: '/words-counter' }]} />
       {/* Header Section */}
       <Header title={'Word & Character Counter'} des={'A simple tool to count words, characters, sentences, and paragraphs in your text.'}/>
 

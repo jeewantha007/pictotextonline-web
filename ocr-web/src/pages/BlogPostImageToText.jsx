@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import { Eye, Zap, Shield, Download, CheckCircle, ArrowRight, FileText, Camera, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogPostImageToText = () => {
   const [openFaq, setOpenFaq] = useState(null);
@@ -142,8 +141,6 @@ const BlogPostImageToText = () => {
           })}
         </script>
       </Helmet>
-
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }, { name: 'How to Extract Text from Image', path: '/blog/how-to-extract-text-from-image' }]} />
 
       {/* Hero Section */}
       <header className="relative overflow-hidden bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-700" role="banner">
@@ -337,25 +334,4 @@ const BlogPostImageToText = () => {
                 <button
                   onClick={() => toggleFaq(index)}
                   aria-expanded={openFaq === index}
-                  aria-controls={`faq-${index}`}
-                  className="flex items-center justify-between w-full p-4 text-left text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-                >
-                  <span className="font-semibold">{faq.question}</span>
-                  <ChevronDown className={`w-5 h-5 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''}`} aria-hidden="true" />
-                </button>
-                <div
-                  id={`faq-${index}`}
-                  className={`${openFaq === index ? 'block' : 'hidden'} p-4`}
-                  role="region">
-                  <p className="text-gray-600">{faq.answer}</p>
-                </div>
-              </article>
-            ))}
-          </div>
-        </section>
-      </main>
-    </div>
-  );
-};
-
-export default BlogPostImageToText;
+                  aria-controls={`

@@ -22,7 +22,6 @@ import {
   Play
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const BlogPostBoostProductivityOCR = () => {
   const [animatedStats, setAnimatedStats] = useState([0, 0, 0]);
@@ -211,8 +210,6 @@ const BlogPostBoostProductivityOCR = () => {
           })}
         </script>
       </Helmet>
-
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Blog', path: '/blog' }, { name: 'Boost Productivity Using AI', path: '/blog/boost-productivity-using-ai' }]} />
 
       <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       {/* Hero Section */}

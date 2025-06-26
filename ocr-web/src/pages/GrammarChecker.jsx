@@ -3,7 +3,6 @@ import Grammar from '../components/Grammar';
 import Format from '../components/Format';
 import Header from '../components/Header';
 import { Helmet } from "react-helmet";
-import Breadcrumbs from '../components/Breadcrumbs';
 
 const GrammarChecker = () => {
   const [inputText, setInputText] = useState('');
@@ -60,7 +59,8 @@ const GrammarChecker = () => {
 
   // Copy text to clipboard
   const handleCopy = () => {
-    const textToCopy = processedText || inputText;
+    // Always prioritize processedText if available
+    const textToCopy = processedText && hasProcessedText ? processedText : inputText;
     if (!textToCopy.trim()) {
       setFeedbackMessage('No text to copy.');
       setFeedbackType('info');
@@ -162,7 +162,6 @@ const GrammarChecker = () => {
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/grammar-checker" />
       </Helmet>
-      <Breadcrumbs items={[{ name: 'Home', path: '/' }, { name: 'Grammar Checker', path: '/grammar-checker' }]} />
       {/* Header Section */}
       <Header title={'Grammar Checker'} des={'An online grammar checker to fix grammar, spelling, and punctuation mistakes instantly.'}/>
 
@@ -185,8 +184,9 @@ const GrammarChecker = () => {
 
               {/* Text Input Area */}
               <div className="mb-6 sm:mb-8">
+                {/* Show processedText if available, else inputText */}
                 <textarea
-                  value={inputText}
+                  value={hasProcessedText && processedText ? processedText : inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   placeholder="Paste or type your text here..."
                   className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400 bg-gray-50 hover:bg-white"
@@ -197,7 +197,7 @@ const GrammarChecker = () => {
                   }}
                 />
                 <div className="mt-2 text-sm text-gray-500 text-right">
-                  {inputText.length} characters
+                  {(hasProcessedText && processedText ? processedText.length : inputText.length)} characters
                 </div>
               </div>
               
@@ -272,33 +272,6 @@ const GrammarChecker = () => {
                 message="Checking grammar..." 
                 subMessage="Analyzing your text for grammar, spelling, and style errors"
               />
-            </div>
-          </section>
-        )}
-
-        {/* Results Section */}
-        {hasProcessedText && processedText && (
-          <section className="mb-8 sm:mb-12 lg:mb-16">
-            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-              <div className="p-6 sm:p-8 lg:p-10">
-                <div className="text-center mb-6 sm:mb-8">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                    Processed Text
-                  </h2>
-                  <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Your text has been analyzed for grammar and style issues.
-                  </p>
-                </div>
-                
-                {/* Processed Text Display */}
-                <div className="bg-gray-50 rounded-xl p-6 border-2 border-gray-200">
-                  <div className="max-h-96 overflow-y-auto">
-                    <pre className="whitespace-pre-wrap text-gray-800 leading-relaxed font-sans text-base">
-                      {processedText}
-                    </pre>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
         )}
