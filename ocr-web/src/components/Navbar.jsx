@@ -49,9 +49,7 @@ const Navbar = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <span className={`text-xl font-bold transition-colors duration-300 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
-              } group-hover:text-blue-600`}>
+              <span className="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300">
                 PicToTextOnline
               </span>
             </Link>
@@ -62,8 +60,8 @@ const Navbar = () => {
                 to="/" 
                 className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/' 
-                    ? 'text-blue-600' 
-                    : isScrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-800'
                 }`}
                 onClick={closeMenu}
               >
@@ -73,8 +71,8 @@ const Navbar = () => {
                 to="/about" 
                 className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/about' 
-                    ? 'text-blue-600' 
-                    : isScrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-800'
                 }`}
                 onClick={closeMenu}
               >
@@ -84,8 +82,8 @@ const Navbar = () => {
                 to="/contact" 
                 className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/contact' 
-                    ? 'text-blue-600' 
-                    : isScrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-800'
                 }`}
                 onClick={closeMenu}
               >
@@ -95,8 +93,8 @@ const Navbar = () => {
                 to="/faq" 
                 className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/faq' 
-                    ? 'text-blue-600' 
-                    : isScrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-800'
                 }`}
                 onClick={closeMenu}
               >
@@ -106,8 +104,8 @@ const Navbar = () => {
                 to="/how-to-use" 
                 className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/how-to-use' 
-                    ? 'text-blue-600' 
-                    : isScrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-800'
                 }`}
                 onClick={closeMenu}
               >
@@ -117,8 +115,8 @@ const Navbar = () => {
                 to="/grammar-checker" 
                 className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/grammar-checker' 
-                    ? 'text-blue-600' 
-                    : isScrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-800'
                 }`}
                 onClick={closeMenu}
               >
@@ -128,8 +126,8 @@ const Navbar = () => {
                 to="/words-counter" 
                 className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/words-counter' 
-                    ? 'text-blue-600' 
-                    : isScrolled ? 'text-gray-700' : 'text-white'
+                    ? 'text-blue-600 bg-blue-50' 
+                    : 'text-gray-800'
                 }`}
                 onClick={closeMenu}
               >
