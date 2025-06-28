@@ -1,6 +1,7 @@
 import React from 'react';
 import { Eye, Zap, Shield, Globe } from 'lucide-react';
 import { Helmet } from "react-helmet";
+import { Link } from 'react-router-dom';
 
 const About = () => {
   const features = [
@@ -30,7 +31,7 @@ const About = () => {
     <section className="relative max-w-6xl mx-auto px-6 py-20 overflow-hidden">
       <Helmet>
         <title>About PictoTextOnline | Free AI Image to Text Converter</title>
-        <meta name="description" content="Learn about PictoTextOnline, the free AI-powered image to text converter for scanned PDFs, receipts, business cards, and handwritten notes. Discover our mission, technology, and privacy-first approach to digital document workflow." />
+        <meta name="description" content="Learn about PictoTextOnline, our mission, and our privacy-first AI OCR technology." />
         <meta name="keywords" content="about PictoTextOnline, image to text, AI OCR, privacy, technology, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
         <meta property="og:title" content="About PictoTextOnline | Free AI Image to Text Converter" />
         <meta property="og:description" content="Learn about PictoTextOnline, our mission, and our privacy-first AI OCR technology." />
@@ -54,9 +55,9 @@ const About = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl mb-6 shadow-lg">
             <Eye size={36} className="text-white" />
           </div>
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
-            About PicToTextOnline
-          </h2>
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-purple-800 bg-clip-text text-transparent mb-4">
+            About PictoTextOnline
+          </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 mx-auto rounded-full"></div>
         </div>
 
@@ -74,6 +75,15 @@ const About = () => {
                 No registration, no hassle, no privacy concerns — just upload your image and extract text instantly.
               </p>
             </div>
+            <div className="mt-8">
+              <Link to="/" className="text-blue-600 hover:underline font-semibold">Go to Home Page</Link>
+              <span className="mx-2">|</span>
+              <Link to="/contact" className="text-blue-600 hover:underline font-semibold">Contact Support</Link>
+              <span className="mx-2">|</span>
+              <Link to="/privacy-policy" className="text-blue-600 hover:underline font-semibold">Read Privacy Policy</Link>
+              <span className="mx-2">|</span>
+              <Link to="/terms-of-use" className="text-blue-600 hover:underline font-semibold">Terms of Use</Link>
+            </div>
           </div>
 
           {/* Feature Cards */}
@@ -88,9 +98,9 @@ const About = () => {
                     {feature.icon}
                   </div>
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
+                <h2 className="font-bold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors">
                   {feature.title}
-                </h3>
+                </h2>
                 <p className="text-gray-600 text-sm leading-relaxed">
                   {feature.description}
                 </p>

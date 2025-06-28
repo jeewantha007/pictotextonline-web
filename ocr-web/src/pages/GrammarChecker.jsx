@@ -180,16 +180,16 @@ const GrammarChecker = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>
-        <title>Grammar Checker | Free Online Grammar & Spelling Tool - PictoTextOnline</title>
-        <meta name="description" content="Check your text for grammar and spelling errors with PictoTextOnline's free online grammar checker. Instantly fix punctuation, style, and spelling for essays, business writing, and more. Fast, accurate, and privacy-friendly." />
+        <title>Grammar Checker | Free Online Grammar Tool - PictoTextOnline</title>
+        <meta name="description" content="Check your text for grammar and spelling errors with PictoTextOnline's free online grammar checker. Fast, accurate, and privacy-friendly." />
         <meta name="keywords" content="grammar checker, spelling checker, free online tool, grammar correction, PictoTextOnline, fix punctuation, essay grammar checker, business writing checker, style checker, writing tool, student writing tool, professional grammar tool, content editing, text proofreading" />
-        <meta property="og:title" content="Grammar Checker | Free Online Grammar & Spelling Tool - PictoTextOnline" />
+        <meta property="og:title" content="Grammar Checker | Free Online Grammar Tool - PictoTextOnline" />
         <meta property="og:description" content="Check your text for grammar and spelling errors with PictoTextOnline's free online grammar checker. Fast, accurate, and privacy-friendly." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pictotextonline.com/grammar-checker" />
         <meta property="og:image" content="https://pictotextonline.com/preview.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Grammar Checker | Free Online Grammar & Spelling Tool - PictoTextOnline" />
+        <meta name="twitter:title" content="Grammar Checker | Free Online Grammar Tool - PictoTextOnline" />
         <meta name="twitter:description" content="Check your text for grammar and spelling errors with PictoTextOnline's free online grammar checker. Fast, accurate, and privacy-friendly." />
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/grammar-checker" />
@@ -235,12 +235,7 @@ const GrammarChecker = () => {
                   value={getCurrentText()}
                   onChange={handleTextChange}
                   placeholder="Paste or type your text here..."
-                  className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400 bg-gray-50 hover:bg-white"
-                  style={{
-                    fontSize: '16px',
-                    lineHeight: '1.6',
-                    fontFamily: 'system-ui, -apple-system, sans-serif'
-                  }}
+                  className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 text-gray-800 placeholder-gray-400 bg-gray-50 hover:bg-white text-base leading-relaxed font-sans"
                 />
                 <div className="mt-2 text-sm text-gray-500 text-right">
                   {getCurrentText().length} characters
@@ -338,11 +333,11 @@ const GrammarChecker = () => {
         <section className="mb-8 sm:mb-12">
           <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-6 sm:p-8 lg:p-10 border border-blue-100 shadow-lg">
             <div className="text-center mb-8">
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
                 ✨ Grammar Checker Tips
-              </h3>
+              </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Get the most out of our AI-powered grammar checker
+                Get the most out of our AI-powered grammar checker with these helpful tips and best practices
               </p>
             </div>
             
@@ -353,8 +348,8 @@ const GrammarChecker = () => {
                     <span className="text-white text-lg font-bold">1</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Paste Your Text</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">Copy and paste your text from any document, email, or article for instant grammar checking</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Paste Your Text</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Copy and paste your text from any document, email, or article for instant grammar checking. Our tool supports text from various sources including Word documents, PDFs, and web content.</p>
                   </div>
                 </div>
               </div>
@@ -365,8 +360,8 @@ const GrammarChecker = () => {
                     <span className="text-white text-lg font-bold">2</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Review Suggestions</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">Our AI will highlight errors and provide intelligent suggestions for improvement</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Review Suggestions</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Our AI will highlight errors and provide intelligent suggestions for improvement. Each suggestion includes detailed explanations to help you understand the correction.</p>
                   </div>
                 </div>
               </div>
@@ -377,8 +372,8 @@ const GrammarChecker = () => {
                     <span className="text-white text-lg font-bold">3</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Apply Corrections</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">Accept or reject suggestions to improve your writing quality and clarity</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Apply Corrections</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Accept or reject suggestions to improve your writing quality and clarity. You have full control over which corrections to apply to your text.</p>
                   </div>
                 </div>
               </div>
@@ -389,10 +384,56 @@ const GrammarChecker = () => {
                     <span className="text-white text-lg font-bold">4</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Export Results</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">Copy the corrected text or download it as a file for use in your documents</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Export Results</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Copy the corrected text or download it as a file for use in your documents. Perfect for essays, business reports, and professional communications.</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-100 shadow-lg">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                🚀 Advanced Grammar Checking Features
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                Our grammar checker uses advanced AI technology to provide comprehensive writing assistance
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Grammar & Spelling</h3>
+                <p className="text-gray-600 text-sm">Detect and correct grammar mistakes, spelling errors, and punctuation issues with high accuracy using advanced language processing.</p>
+              </div>
+              
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Style Enhancement</h3>
+                <p className="text-gray-600 text-sm">Improve writing style, clarity, and readability with intelligent suggestions for better sentence structure and word choice.</p>
+              </div>
+              
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Privacy First</h3>
+                <p className="text-gray-600 text-sm">Your text is processed securely and never stored permanently. We prioritize your privacy and data protection at all times.</p>
               </div>
             </div>
           </div>

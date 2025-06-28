@@ -44,9 +44,9 @@ const BlogSection = () => {
             Latest Updates
           </div>
           
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
+          <h2 className="text-5xl font-bold bg-gradient-to-r from-gray-800 via-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
             Latest Articles
-          </h1>
+          </h2>
           
           <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
             Discover the latest insights, tips, and trends in OCR technology and document management

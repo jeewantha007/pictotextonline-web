@@ -63,8 +63,8 @@ const TermsOfUse = () => {
   return (
     <section className="relative max-w-5xl mx-auto px-6 py-20 overflow-hidden">
       <Helmet>
-        <title>Terms of Use | PictoTextOnline</title>
-        <meta name="description" content="Read the terms of use for PictoTextOnline. Understand your rights and responsibilities when using our free AI image to text converter for scanned PDFs, receipts, business cards, and handwritten notes." />
+        <title>Terms of Use | Free AI Image to Text Converter - PictoTextOnline</title>
+        <meta name="description" content="Read the terms of use for PictoTextOnline. Understand your rights and responsibilities when using our free AI image to text converter." />
         <meta name="keywords" content="terms of use, PictoTextOnline, user agreement, legal, AI OCR, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
         <meta property="og:title" content="Terms of Use | PictoTextOnline" />
         <meta property="og:description" content="Read the terms of use for PictoTextOnline. Understand your rights and responsibilities when using our free AI image to text converter." />
@@ -105,7 +105,7 @@ const TermsOfUse = () => {
               <Users size={24} className="text-white" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Fair Use & Community Guidelines</h3>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Fair Use & Community Guidelines</h2>
               <p className="text-gray-700 leading-relaxed">
                 These terms ensure <span className="font-bold text-orange-600">fair access for everyone</span> while protecting our service and community. By using PicToTextOnline, you're joining a community that values respect, integrity, and responsible usage.
               </p>
@@ -176,32 +176,6 @@ const TermsOfUse = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
     </section>
   );
 };

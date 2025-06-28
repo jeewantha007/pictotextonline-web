@@ -37,7 +37,7 @@ const Navbar = () => {
             >
               Home
             </Link>
-              <Link
+            <Link
               to="/grammar-checker"
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 currentPath === '/grammar-checker' 
@@ -47,7 +47,7 @@ const Navbar = () => {
             >
               Grammar Checker
             </Link>
-              <Link
+            <Link
               to="/words-counter"
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                 currentPath === '/words-counter' 
@@ -57,8 +57,6 @@ const Navbar = () => {
             >
              Words Counter
             </Link>
-
-            
             <Link
               to="/about"
               className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -113,6 +111,28 @@ const Navbar = () => {
               }`}
             >
               Home
+            </Link>
+            <Link
+              to="/grammar-checker"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                currentPath === '/grammar-checker' 
+                  ? 'text-blue-600 bg-blue-50' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
+              Grammar Checker
+            </Link>
+            <Link
+              to="/words-counter"
+              onClick={() => setMobileMenuOpen(false)}
+              className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
+                currentPath === '/words-counter' 
+                  ? 'text-blue-600 bg-blue-50' 
+                  : 'text-gray-700 hover:text-blue-600 hover:bg-gray-50'
+              }`}
+            >
+              Words Counter
             </Link>
             <Link
               to="/about"

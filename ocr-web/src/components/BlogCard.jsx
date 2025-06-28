@@ -22,11 +22,11 @@ const BlogCard = ({ title, description, url, readTime = "5 min read", date = "De
         </div>
 
         {/* Title */}
-        <h2 className="text-xl font-bold mb-4 text-gray-800 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
-          <a href={url} target="_blank" rel="noopener noreferrer" className="block">
+        <a href={url} target="_blank" rel="noopener noreferrer" className="block">
+          <h2 className="text-xl font-bold mb-4 text-gray-800 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
             {title}
-          </a>
-        </h2>
+          </h2>
+        </a>
 
         {/* Description */}
         <p className="text-gray-600 leading-relaxed mb-6 line-clamp-3">
