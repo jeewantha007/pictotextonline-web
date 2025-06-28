@@ -206,6 +206,31 @@ const Home = () => {
           </div>
         </section>
 
+        {/* Results Section with Action Buttons */}
+        {extractedText && (
+          <section className="mb-8 sm:mb-12 lg:mb-16">
+            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+              <div className="p-6 sm:p-8 lg:p-10">
+                <div className="text-center mb-6 sm:mb-8">
+                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+                    Text Extraction Results
+                  </h2>
+                  <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                    Your text has been successfully extracted and formatted. Use the tools below to copy, download, or check grammar.
+                  </p>
+                </div>
+                
+                {/* Result Box with integrated action buttons */}
+                <ResultBox 
+                  text={extractedText} 
+                  onGrammarCheck={handleGrammarCheck}
+                  grammarLoading={grammarLoading}
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Comprehensive Content Section for SEO */}
         <section className="mb-12 lg:mb-16">
           <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
@@ -317,31 +342,6 @@ const Home = () => {
                 message="Checking grammar..." 
                 subMessage="Analyzing your text for grammar and spelling errors"
               />
-            </div>
-          </section>
-        )}
-
-        {/* Results Section with Action Buttons */}
-        {extractedText && (
-          <section className="mb-8 sm:mb-12 lg:mb-16">
-            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
-              <div className="p-6 sm:p-8 lg:p-10">
-                <div className="text-center mb-6 sm:mb-8">
-                  <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                    Text Extraction Results
-                  </h2>
-                  <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-                    Your text has been successfully extracted and formatted. Use the tools below to copy, download, or check grammar.
-                  </p>
-                </div>
-                
-                {/* Result Box with integrated action buttons */}
-                <ResultBox 
-                  text={extractedText} 
-                  onGrammarCheck={handleGrammarCheck}
-                  grammarLoading={grammarLoading}
-                />
-              </div>
             </div>
           </section>
         )}
