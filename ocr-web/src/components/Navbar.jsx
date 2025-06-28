@@ -60,7 +60,7 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-8">
               <Link 
                 to="/" 
-                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/' 
                     ? 'text-blue-600' 
                     : isScrolled ? 'text-gray-700' : 'text-white'
@@ -71,7 +71,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/about" 
-                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/about' 
                     ? 'text-blue-600' 
                     : isScrolled ? 'text-gray-700' : 'text-white'
@@ -82,7 +82,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/contact" 
-                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/contact' 
                     ? 'text-blue-600' 
                     : isScrolled ? 'text-gray-700' : 'text-white'
@@ -93,7 +93,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/faq" 
-                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/faq' 
                     ? 'text-blue-600' 
                     : isScrolled ? 'text-gray-700' : 'text-white'
@@ -104,7 +104,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/how-to-use" 
-                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/how-to-use' 
                     ? 'text-blue-600' 
                     : isScrolled ? 'text-gray-700' : 'text-white'
@@ -115,7 +115,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/grammar-checker" 
-                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/grammar-checker' 
                     ? 'text-blue-600' 
                     : isScrolled ? 'text-gray-700' : 'text-white'
@@ -126,7 +126,7 @@ const Navbar = () => {
               </Link>
               <Link 
                 to="/words-counter" 
-                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                className={`font-medium transition-colors duration-200 hover:text-white hover:bg-blue-600 px-3 py-2 rounded-lg ${
                   location.pathname === '/words-counter' 
                     ? 'text-blue-600' 
                     : isScrolled ? 'text-gray-700' : 'text-white'
@@ -172,7 +172,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === '/' 
                     ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'text-gray-700 hover:bg-blue-600 hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
@@ -183,7 +183,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === '/about' 
                     ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'text-gray-700 hover:bg-blue-600 hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
@@ -194,7 +194,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === '/contact' 
                     ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'text-gray-700 hover:bg-blue-600 hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
@@ -205,7 +205,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === '/faq' 
                     ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'text-gray-700 hover:bg-blue-600 hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
@@ -216,7 +216,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === '/how-to-use' 
                     ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'text-gray-700 hover:bg-blue-600 hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
@@ -227,7 +227,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === '/grammar-checker' 
                     ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'text-gray-700 hover:bg-blue-600 hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
@@ -238,7 +238,7 @@ const Navbar = () => {
                 className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
                   location.pathname === '/words-counter' 
                     ? 'bg-blue-50 text-blue-600' 
-                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                    : 'text-gray-700 hover:bg-blue-600 hover:text-white'
                 }`}
                 onClick={closeMenu}
               >
