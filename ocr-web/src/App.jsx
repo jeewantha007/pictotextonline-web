@@ -13,6 +13,8 @@ import BlogPostTop5ReasonsOnlineOCR from "./pages/BlogPostTop5ReasonsOnlineOCR";
 import BlogPostOCRRevolution2025 from "./pages/BlogPostOCRRevolution2025";
 import GrammarChecker from "./pages/GrammarChecker";
 import WordCounter from "./pages/WordCounter";
+import FAQ from "./pages/FAQ";
+import HowToUse from "./pages/HowToUse";
 import NotFound from "./pages/NotFound";
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
           <Route path="/words-counter" element={<WordCounter />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/how-to-use" element={<HowToUse />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
           <Route path="/blog/how-to-extract-text-from-image" element={<BlogPostImageToText />} />
