@@ -140,17 +140,17 @@ const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>
-        <title>AI Image to Text Converter | Free Online OCR for Handwriting & Photos - PictoTextOnline</title>
-        <meta name="description" content="Convert images, scanned PDFs, screenshots, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Extract text from receipts, business cards, forms, and more—no signup needed. Fast, accurate, secure, and supports multiple languages." />
+        <title>AI Image to Text Converter | Free Online OCR - PictoTextOnline</title>
+        <meta name="description" content="Convert images, scanned PDFs, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Fast, accurate, and secure." />
         <meta name="keywords" content="image to text, free ocr, online ocr, handwriting to text, convert image to text, extract text from image, AI OCR, scanned document to text, screenshot to text, PictoTextOnline, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, extract text from forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
         <meta property="og:title" content="AI Image to Text Converter | Free Online OCR for Handwriting & Photos - PictoTextOnline" />
-        <meta property="og:description" content="Convert images, scanned PDFs, screenshots, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Extract text from receipts, business cards, forms, and more—no signup needed. Fast, accurate, secure, and supports multiple languages." />
+        <meta property="og:description" content="Convert images, scanned PDFs, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Fast, accurate, and secure." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pictotextonline.com/" />
         <meta property="og:image" content="https://pictotextonline.com/preview.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="AI Image to Text Converter | Free Online OCR for Handwriting & Photos - PictoTextOnline" />
-        <meta name="twitter:description" content="Convert images, scanned PDFs, screenshots, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Extract text from receipts, business cards, forms, and more—no signup needed. Fast, accurate, secure, and supports multiple languages." />
+        <meta name="twitter:title" content="AI Image to Text Converter | Free Online OCR - PictoTextOnline" />
+        <meta name="twitter:description" content="Convert images, scanned PDFs, and handwritten notes to editable text instantly with PictoTextOnline's free AI-powered OCR tool. Fast, accurate, and secure." />
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/" />
       </Helmet>
@@ -169,7 +169,7 @@ const Home = () => {
             <div className="p-6 sm:p-8 lg:p-10">
               <div className="text-center mb-6 sm:mb-8">
                 <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                  Upload & Extract Text
+                  Upload Image & Extract Text
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                   Select an image containing text and our AI will extract it for you with intelligent formatting
@@ -239,7 +239,7 @@ const Home = () => {
               <div className="p-6 sm:p-8 lg:p-10">
                 <div className="text-center mb-6 sm:mb-8">
                   <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
-                    Extracted Text
+                    Text Extraction Results
                   </h2>
                   <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
                     Your text has been successfully extracted and formatted. Use the tools below to copy, download, or check grammar.

@@ -58,7 +58,7 @@ const BlogPostImageToText = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100">
       <Helmet>
-        <title>Convert Images to Text with AI-Powered OCR | PictoTextOnline</title>
+        <title>Convert Images to Text with AI OCR | PictoTextOnline</title>
         <meta
           name="description"
           content="Convert any image, scanned PDF, screenshot, or handwritten note to editable text instantly with PictoTextOnline's free AI-powered OCR. Extract text from receipts, business cards, forms, and more. Supports multiple languages and handwriting recognition."
@@ -189,7 +189,7 @@ const BlogPostImageToText = () => {
             <p className="text-lg text-gray-700 leading-relaxed">
               Thanks to advances in Artificial Intelligence (AI) and Optical Character Recognition (OCR) technology, tools like{" "}
               <a
-                href="https://www.pictotextonline.com"
+                href="https://pictotextonline.com"
                 className="text-blue-600 hover:text-blue-700 font-semibold underline decoration-2 underline-offset-2"
                 target="_blank"
                 rel="noopener noreferrer"

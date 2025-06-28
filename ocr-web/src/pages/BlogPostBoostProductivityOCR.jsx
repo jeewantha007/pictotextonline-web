@@ -130,7 +130,7 @@ const BlogPostBoostProductivityOCR = () => {
   return (
     <>
       <Helmet>
-        <title>Boost Productivity Using AI-Powered OCR Tools | PictoTextOnline</title>
+        <title>Boost Productivity Using AI OCR Tools | PictoTextOnline</title>
         <meta
           name="description"
           content="Discover how AI-powered OCR tools can help you boost productivity by quickly converting images, scanned PDFs, business cards, and handwritten notes into editable text. Learn benefits, tips, and best practices for digital document workflow, data extraction, and more."

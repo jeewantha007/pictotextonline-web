@@ -5,7 +5,7 @@ const BlogPostTop5ReasonsOnlineOCR = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 relative overflow-hidden">
       <Helmet>
-        <title>Top 5 Reasons to Use Online OCR Tools for Your Business | PictoTextOnline</title>
+        <title>Top 5 Reasons to Use Online OCR Tools for Business | PictoTextOnline</title>
         <meta
           name="description"
           content="Discover why online OCR tools are essential for businesses. Learn the top 5 benefits including time-saving, cost-efficiency, improved data management, and how to convert scanned PDFs, receipts, and handwritten notes to text for digital workflows."
@@ -185,7 +185,7 @@ const BlogPostTop5ReasonsOnlineOCR = () => {
               <div className="relative inline-block group">
                 <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-emerald-600 rounded-full blur-lg group-hover:blur-xl transition-all duration-300"></div>
                 <a
-                  href="https://www.pictotextonline.com"
+                  href="https://pictotextonline.com"
                   className="relative inline-flex items-center gap-3 bg-gradient-to-r from-green-600 to-emerald-600 text-white font-bold px-12 py-6 rounded-full shadow-xl hover:shadow-2xl transform hover:scale-105 transition-all duration-300 text-lg"
                   aria-label="Start using PictoTextOnline OCR"
                 >

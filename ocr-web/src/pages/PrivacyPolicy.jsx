@@ -1,55 +1,61 @@
 import React from 'react';
-import { Shield, Eye, Lock, Globe, FileText, Clock } from 'lucide-react';
+import { Shield, Eye, Lock, Globe, FileText, Clock, Users, Database, Server } from 'lucide-react';
 import { Helmet } from "react-helmet";
 
 const PrivacyPolicy = () => {
   const sections = [
   {
     id: "introduction",
-    title: "1. Introduction",
+    title: "Introduction",
     icon: <FileText size={20} />,
-    content: "Welcome to PicToTextOnline. We are committed to protecting your privacy and ensuring transparency about how we handle your data. This Privacy Policy explains how we collect, use, and safeguard your information when you use our web application."
+    content: "Welcome to PicToTextOnline. We are committed to protecting your privacy and ensuring transparency about how we handle your data. This Privacy Policy explains how we collect, use, and safeguard your information when you use our web application. Our commitment to privacy is fundamental to our service design and operation."
   },
   {
     id: "information-collection",
-    title: "2. Information We Collect",
+    title: "Information We Collect",
     icon: <Eye size={20} />,
     content: [
-      "Uploaded Images & Text: Images you upload are processed using AWS Textract for OCR functionality. These files are not stored permanently on our servers.",
-      "Grammar Checks: Text submitted for grammar checking is sent to LanguageTool API for processing.",
-      "IP Address: We temporarily track IP addresses to enforce usage limits and prevent abuse.",
-      "No Personal Data: We do not require account creation or store personal information."
+      "Uploaded Images & Text: Images you upload are processed using AWS Textract for OCR functionality. These files are not stored permanently on our servers and are automatically deleted after processing.",
+      "Grammar Checks: Text submitted for grammar checking is sent to LanguageTool API for processing. No text content is stored on our servers.",
+      "IP Address: We temporarily track IP addresses to enforce usage limits and prevent abuse. This data is not linked to personal information.",
+      "No Personal Data: We do not require account creation or store personal information. Your privacy is our priority."
     ]
   },
   {
     id: "data-usage",
-    title: "3. How We Use Information",
+    title: "How We Use Information",
     icon: <Shield size={20} />,
-    content: "We use the collected data solely to operate and improve our service, monitor usage patterns, prevent abuse, and ensure optimal performance for all users."
+    content: "We use the collected data solely to operate and improve our service, monitor usage patterns, prevent abuse, and ensure optimal performance for all users. Your data is never sold, shared, or used for purposes other than providing our OCR and grammar checking services."
   },
   {
     id: "cookies",
-    title: "4. Cookies & Analytics",
+    title: "Cookies & Analytics",
     icon: <Globe size={20} />,
-    content: "We may use third-party cookies (such as Google AdSense) for ad personalization and analytics. These help us understand usage patterns and improve our service while keeping it free for everyone."
+    content: "We may use third-party cookies (such as Google AdSense) for ad personalization and analytics. These help us understand usage patterns and improve our service while keeping it free for everyone. You can control cookie settings through your browser preferences."
   },
   {
     id: "third-party",
-    title: "5. Third-Party Services",
+    title: "Third-Party Services",
     icon: <Lock size={20} />,
-    content: "We integrate with trusted services including AWS Textract for OCR processing, LanguageTool for grammar checking, and Google AdSense for advertising. Each service follows its own privacy practices and security standards."
+    content: "We integrate with trusted services including AWS Textract for OCR processing, LanguageTool for grammar checking, and Google AdSense for advertising. Each service follows its own privacy practices and security standards. We carefully select partners who share our commitment to data protection."
   },
   {
     id: "user-rights",
-    title: "6. Your Rights & Control",
-    icon: <Shield size={20} />,
-    content: "You maintain full control over your data. You may stop using the service at any time, and no permanent records of your uploads are maintained. For questions or concerns, contact us at pictotext.online@gmail.com ."
+    title: "Your Rights & Control",
+    icon: <Users size={20} />,
+    content: "You maintain full control over your data. You may stop using the service at any time, and no permanent records of your uploads are maintained. For questions or concerns about your privacy, contact us at pictotext.online@gmail.com. We respond to all privacy inquiries within 48 hours."
+  },
+  {
+    id: "data-security",
+    title: "Data Security",
+    icon: <Database size={20} />,
+    content: "We implement industry-standard security measures to protect your data during transmission and processing. All data is encrypted in transit using HTTPS protocols. Our servers are regularly updated and monitored for security vulnerabilities."
   },
   {
     id: "updates",
-    title: "7. Policy Updates",
+    title: "Policy Updates",
     icon: <Clock size={20} />,
-    content: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Continued use of the service constitutes agreement to any updates."
+    content: "We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. Continued use of the service constitutes agreement to any updates. We will notify users of significant changes through our website."
   }
 ];
 
@@ -57,8 +63,8 @@ const PrivacyPolicy = () => {
   return (
     <section className="relative max-w-5xl mx-auto px-6 py-20 overflow-hidden">
       <Helmet>
-        <title>Privacy Policy | PictoTextOnline</title>
-        <meta name="description" content="Read PictoTextOnline's privacy policy. Learn how we protect your data and ensure your privacy when using our free AI image to text converter for scanned PDFs, receipts, business cards, and handwritten notes." />
+        <title>Privacy Policy | Free AI Image to Text Converter - PictoTextOnline</title>
+        <meta name="description" content="Read PictoTextOnline's privacy policy. Learn how we protect your data and ensure your privacy when using our free AI image to text converter." />
         <meta name="keywords" content="privacy policy, data protection, PictoTextOnline, user privacy, AI OCR, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
         <meta property="og:title" content="Privacy Policy | PictoTextOnline" />
         <meta property="og:description" content="Read PictoTextOnline's privacy policy. Learn how we protect your data and ensure your privacy when using our free AI image to text converter." />
@@ -99,9 +105,9 @@ const PrivacyPolicy = () => {
               <Lock size={24} className="text-white" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Our Privacy Commitment</h3>
+              <h2 className="text-xl font-bold text-gray-900 mb-2">Our Privacy Commitment</h2>
               <p className="text-gray-700 leading-relaxed">
-                We believe in <span className="font-bold text-green-600">privacy by design</span>. Your data is processed securely, never stored permanently, and you maintain complete control over your information at all times.
+                We believe in <span className="font-bold text-green-600">privacy by design</span>. Your data is processed securely, never stored permanently, and you maintain complete control over your information at all times. Our commitment to transparency means you always know how your data is being used.
               </p>
             </div>
           </div>
@@ -154,32 +160,6 @@ const PrivacyPolicy = () => {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        @keyframes blob {
-          0% {
-            transform: translate(0px, 0px) scale(1);
-          }
-          33% {
-            transform: translate(30px, -50px) scale(1.1);
-          }
-          66% {
-            transform: translate(-20px, 20px) scale(0.9);
-          }
-          100% {
-            transform: translate(0px, 0px) scale(1);
-          }
-        }
-        .animate-blob {
-          animation: blob 7s infinite;
-        }
-        .animation-delay-2000 {
-          animation-delay: 2s;
-        }
-        .animation-delay-4000 {
-          animation-delay: 4s;
-        }
-      `}</style>
     </section>
   );
 };

@@ -143,17 +143,17 @@ const WordCounter = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       <Helmet>
-        <title>Word Counter | Free Online Text Analysis Tool - PictoTextOnline</title>
-        <meta name="description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, paragraphs, reading time, and more. Perfect for students, writers, and professionals. No signup required." />
+        <title>Word Counter | Free Text Analysis Tool - PictoTextOnline</title>
+        <meta name="description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, and more. No signup required." />
         <meta name="keywords" content="word counter, text analysis, free online tool, character count, sentence count, PictoTextOnline, text statistics, reading time calculator, writing tool, student writing tool, professional writing tool, essay checker, content analysis, document analysis" />
         <meta property="og:title" content="Word Counter | Free Online Text Analysis Tool - PictoTextOnline" />
-        <meta property="og:description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, paragraphs, and more. No signup required." />
+        <meta property="og:description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, and more. No signup required." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pictotextonline.com/words-counter" />
         <meta property="og:image" content="https://pictotextonline.com/preview.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Word Counter | Free Online Text Analysis Tool - PictoTextOnline" />
-        <meta name="twitter:description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, paragraphs, and more. No signup required." />
+        <meta name="twitter:description" content="Use PictoTextOnline's free word counter to analyze your text for word count, character count, sentences, and more. No signup required." />
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/words-counter" />
       </Helmet>
@@ -183,8 +183,7 @@ const WordCounter = () => {
                   value={text}
                   onChange={handleTextChange}
                   placeholder="Type or paste your text here..."
-                  className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-200 resize-none font-mono text-sm leading-relaxed"
-                  style={{ minHeight: '256px' }}
+                  className="w-full h-64 p-4 border-2 border-gray-200 rounded-xl focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-200 resize-none font-mono text-sm leading-relaxed min-h-[256px]"
                 />
               </div>
 
@@ -291,11 +290,11 @@ const WordCounter = () => {
         <section className="mb-8 sm:mb-12">
           <div className="bg-gradient-to-r from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-6 sm:p-8 lg:p-10 border border-blue-100 shadow-lg">
             <div className="text-center mb-8">
-              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
                 💡 Usage Tips
-              </h3>
+              </h2>
               <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
-                Get the most out of your word counting experience
+                Get the most out of your word counting experience with these helpful tips and best practices
               </p>
             </div>
             
@@ -306,8 +305,8 @@ const WordCounter = () => {
                     <span className="text-white text-lg font-bold">1</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Real-time Counting</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">Statistics update automatically as you type or paste content</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Real-time Counting</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Statistics update automatically as you type or paste content. Watch your word count, character count, and reading time change in real-time as you write or edit your text.</p>
                   </div>
                 </div>
               </div>
@@ -318,8 +317,8 @@ const WordCounter = () => {
                     <span className="text-white text-lg font-bold">2</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Multiple Formats</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">Works with any text format - articles, essays, emails, or social media posts</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Multiple Formats</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Works with any text format - articles, essays, emails, or social media posts. Perfect for students checking essay lengths, writers tracking content, and professionals analyzing documents.</p>
                   </div>
                 </div>
               </div>
@@ -330,8 +329,8 @@ const WordCounter = () => {
                     <span className="text-white text-lg font-bold">3</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Privacy Focused</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">All counting happens in your browser - no data is sent to servers</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Privacy Focused</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">All counting happens in your browser - no data is sent to servers. Your text remains completely private and secure while you analyze it.</p>
                   </div>
                 </div>
               </div>
@@ -342,10 +341,56 @@ const WordCounter = () => {
                     <span className="text-white text-lg font-bold">4</span>
                   </div>
                   <div>
-                    <h4 className="font-bold text-gray-900 text-lg mb-2">Reading Time</h4>
-                    <p className="text-gray-600 text-sm leading-relaxed">Estimate how long it takes to read your content based on average reading speed</p>
+                    <h3 className="font-bold text-gray-900 text-lg mb-2">Reading Time</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">Estimate how long it takes to read your content based on average reading speed. Useful for presentations, articles, and content planning.</p>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Features Section */}
+        <section className="mb-8 sm:mb-12">
+          <div className="bg-white rounded-3xl p-6 sm:p-8 lg:p-10 border border-gray-100 shadow-lg">
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3">
+                🚀 Advanced Text Analysis Features
+              </h2>
+              <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto">
+                Our word counter provides comprehensive text analysis with multiple metrics and insights
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Character Analysis</h3>
+                <p className="text-gray-600 text-sm">Get detailed character counts including spaces and excluding spaces for precise text analysis and formatting requirements.</p>
+              </div>
+              
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 20l4-16m2 16l4-16M6 9h14M4 15h14" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Word & Sentence Count</h3>
+                <p className="text-gray-600 text-sm">Accurate word counting with intelligent sentence detection based on punctuation patterns for comprehensive text analysis.</p>
+              </div>
+              
+              <div className="text-center p-6">
+                <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 shadow-lg">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Reading Time</h3>
+                <p className="text-gray-600 text-sm">Calculate estimated reading time based on average reading speed to help with content planning and audience engagement.</p>
               </div>
             </div>
           </div>

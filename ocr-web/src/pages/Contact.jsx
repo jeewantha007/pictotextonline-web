@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Mail, MessageCircle, Send, CheckCircle, User, AtSign, Heart } from 'lucide-react';
 import emailjs from 'emailjs-com';
 import { Helmet } from "react-helmet";
+import { Link } from 'react-router-dom';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -72,16 +73,16 @@ const Contact = () => {
   return (
     <section className="relative max-w-6xl mx-auto px-6 py-20 overflow-hidden">
       <Helmet>
-        <title>Contact Us | PictoTextOnline</title>
-        <meta name="description" content="Contact PictoTextOnline for support, feedback, partnership inquiries, or help with converting images, scanned PDFs, and handwritten notes to text. Fast, friendly, and privacy-focused support for all your OCR needs." />
+        <title>Contact Us | Get Support & Feedback - PictoTextOnline</title>
+        <meta name="description" content="Contact PictoTextOnline for support, feedback, or partnership inquiries. Fast, friendly, and privacy-focused support." />
         <meta name="keywords" content="contact, support, PictoTextOnline, feedback, help, OCR support, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
-        <meta property="og:title" content="Contact Us | PictoTextOnline" />
+        <meta property="og:title" content="Contact Us | Get Support & Feedback - PictoTextOnline" />
         <meta property="og:description" content="Contact PictoTextOnline for support, feedback, or partnership inquiries. Fast, friendly, and privacy-focused support." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://pictotextonline.com/contact" />
         <meta property="og:image" content="https://pictotextonline.com/preview.png" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Contact Us | PictoTextOnline" />
+        <meta name="twitter:title" content="Contact Us | Get Support & Feedback - PictoTextOnline" />
         <meta name="twitter:description" content="Contact PictoTextOnline for support, feedback, or partnership inquiries. Fast, friendly, and privacy-focused support." />
         <meta name="twitter:image" content="https://pictotextonline.com/preview.png" />
         <link rel="canonical" href="https://pictotextonline.com/contact" />
@@ -97,14 +98,23 @@ const Contact = () => {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl mb-6 shadow-lg">
             <MessageCircle size={36} className="text-white" />
           </div>
-          <h2 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-cyan-800 to-blue-800 bg-clip-text text-transparent mb-4">
-            Get in Touch
-          </h2>
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-gray-900 via-cyan-800 to-blue-800 bg-clip-text text-transparent mb-4">
+            Contact PictoTextOnline Support
+          </h1>
           <div className="w-24 h-1 bg-gradient-to-r from-cyan-500 to-blue-600 mx-auto rounded-full mb-4"></div>
           <p className="text-gray-600 text-xl max-w-2xl mx-auto leading-relaxed">
             Have questions, suggestions, or need support? We'd love to hear from you. 
             <span className="font-semibold text-cyan-600"> Your feedback drives our innovation</span>.
           </p>
+          <div className="mt-8">
+            <Link to="/" className="text-blue-600 hover:underline font-semibold">Go to Home Page</Link>
+            <span className="mx-2">|</span>
+            <Link to="/about" className="text-blue-600 hover:underline font-semibold">About PictoTextOnline</Link>
+            <span className="mx-2">|</span>
+            <Link to="/privacy-policy" className="text-blue-600 hover:underline font-semibold">Read Privacy Policy</Link>
+            <span className="mx-2">|</span>
+            <Link to="/terms-of-use" className="text-blue-600 hover:underline font-semibold">Terms of Use</Link>
+          </div>
         </div>
 
         {/* Contact Info Cards */}
