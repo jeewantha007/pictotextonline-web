@@ -1,6 +1,16 @@
 # Enable URL rewriting
 RewriteEngine On
 
+# Force HTTPS and www removal to prevent duplicate content
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://pictotextonline.com/$1 [R=301,L]
+
+# Remove trailing slashes to prevent duplicate content
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
 # Handle client-side routing for React Router
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
