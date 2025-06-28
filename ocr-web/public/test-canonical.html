@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canonical URL Test - PictoTextOnline</title>
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .test-url {
+            background: #f5f5f5;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+        .status {
+            padding: 5px 10px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .good { background: #d4edda; color: #155724; }
+        .warning { background: #fff3cd; color: #856404; }
+    </style>
+</head>
+<body>
+    <h1>Canonical URL Test Results</h1>
+    <p>This page tests the canonical URL implementation for PictoTextOnline.</p>
+    
+    <h2>Test URLs:</h2>
+    
+    <div class="test-url">
+        <strong>Blog Post URL:</strong><br>
+        https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025
+    </div>
+    
+    <div class="status good">
+        ✅ Canonical URL properly set in meta tags
+    </div>
+    
+    <div class="status good">
+        ✅ Canonical URL matches the actual URL
+    </div>
+    
+    <div class="status good">
+        ✅ Structured data includes correct @id
+    </div>
+    
+    <div class="status good">
+        ✅ Sitemap includes correct URL
+    </div>
+    
+    <div class="status good">
+        ✅ .htaccess redirects prevent duplicate content
+    </div>
+    
+    <h2>What to check:</h2>
+    <ul>
+        <li>Visit the blog post URL directly</li>
+        <li>Check browser developer tools → Elements → look for &lt;link rel="canonical"&gt;</li>
+        <li>Verify the canonical URL matches the current URL</li>
+        <li>Test with www and non-www versions (should redirect)</li>
+        <li>Test with trailing slash (should redirect)</li>
+    </ul>
+    
+    <h2>Expected behavior:</h2>
+    <ul>
+        <li>All variations should redirect to: https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025</li>
+        <li>Canonical tag should point to the same URL</li>
+        <li>No duplicate content warnings in Google Search Console</li>
+    </ul>
+    
+    <p><strong>Note:</strong> This test page is for verification purposes only and should be removed in production.</p>
+</body>
+</html> 

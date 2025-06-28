@@ -10,16 +10,40 @@ const BlogPostOCRRevolution2025 = () => {
         <title>OCR Tools Revolutionizing Document Management 2025 | PictoTextOnline</title>
         <meta name="description" content="Explore how online OCR tools are transforming document management in 2025 with improved efficiency, accuracy, and accessibility." />
         <meta name="keywords" content="OCR 2025, online OCR tools, document management, AI OCR, digital transformation, convert scanned PDF to text, extract text from receipts, OCR for business cards, digital document workflow, multi-language OCR, OCR for forms, OCR for invoices, OCR for handwriting, OCR for students, OCR for professionals" />
+        
+        {/* Canonical and URL tags */}
+        <link rel="canonical" href="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
+        <meta property="og:url" content="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
+        
+        {/* Open Graph tags */}
         <meta property="og:title" content="OCR Tools Revolutionizing Document Management 2025" />
         <meta property="og:description" content="Learn how AI-powered online OCR tools are changing the way businesses handle documents in 2025." />
         <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
         <meta property="og:image" content="https://pictotextonline.com/assets/ocr-revolution-2025.jpg" />
+        <meta property="og:site_name" content="PictoTextOnline" />
+        <meta property="article:published_time" content="2024-12-28T00:00:00Z" />
+        <meta property="article:modified_time" content="2024-12-28T00:00:00Z" />
+        <meta property="article:author" content="PictoTextOnline Team" />
+        <meta property="article:section" content="Technology" />
+        <meta property="article:tag" content="OCR, Document Management, AI, 2025" />
+        
+        {/* Twitter Card tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="OCR Tools Revolutionizing Document Management 2025" />
         <meta name="twitter:description" content="Learn how AI-powered online OCR tools are changing the way businesses handle documents in 2025." />
         <meta name="twitter:image" content="https://pictotextonline.com/assets/ocr-revolution-2025.jpg" />
-        <link rel="canonical" href="https://pictotextonline.com/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" />
+        <meta name="twitter:site" content="@PictoTextOnline" />
+        
+        {/* Additional SEO tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="author" content="PictoTextOnline Team" />
+        <meta name="publisher" content="PictoTextOnline" />
+        <meta name="language" content="en" />
+        <meta name="revisit-after" content="7 days" />
+        
+        {/* Prevent duplicate content */}
+        <meta name="googlebot" content="index, follow" />
+        <meta name="bingbot" content="index, follow" />
       </Helmet>
      
       {/* Animated Background Elements */}
