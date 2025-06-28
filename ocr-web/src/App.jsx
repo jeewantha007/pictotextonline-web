@@ -26,16 +26,16 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/grammar-checker" element={<GrammarChecker />} />
-          <Route path="/words-counter" element={<WordCounter />} />
+           <Route path="/words-counter" element={<WordCounter />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/how-to-use" element={<HowToUse />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
-          <Route path="/blog/how-to-extract-text-from-image" element={<BlogPostImageToText />} />
+             <Route path="/blog/how-to-extract-text-from-image" element={<BlogPostImageToText />} />
           <Route path="/blog/boost-productivity-using-ai" element={<BlogPostBoostProductivityOCR />} />
-          <Route path="/blog/top-5-reasons-to-use-online-ocr-tools-for-your-business" element={<BlogPostTop5ReasonsOnlineOCR />} />
+              <Route path="/blog/top-5-reasons-to-use-online-ocr-tools-for-your-business" element={<BlogPostTop5ReasonsOnlineOCR />} />
           <Route path="/blog/how-online-ocr-tools-are-revolutionizing-document-management-2025" element={<BlogPostOCRRevolution2025 />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
