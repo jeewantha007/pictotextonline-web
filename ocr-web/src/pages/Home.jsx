@@ -159,7 +159,7 @@ const Home = () => {
       <Header title={'Image to Text Converter'} des={'An online image to text converter to extract text from images.'}/>
 
       {/* Main Content */}
-      <main className="max-w-5xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12 lg:pb-20">
+      <main id="main-content" className="max-w-5xl mx-auto px-4 sm:px-6 pb-8 sm:pb-12 lg:pb-20">
         
         {/* Feedback Message */}
         <FeedbackMessage />
@@ -198,12 +198,100 @@ const Home = () => {
                     onClick={handleReset}
                     className="bg-gray-100 hover:bg-gray-200 text-gray-700 border-2 border-gray-300 hover:border-gray-400 px-6 py-3 rounded-xl font-semibold transition-all duration-200 text-sm sm:text-base min-w-[120px] flex items-center justify-center"
                   >
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                    </svg>
-                    Start Over
+                    Reset
                   </button>
                 )}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Comprehensive Content Section for SEO */}
+        <section className="mb-12 lg:mb-16">
+          <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden">
+            <div className="p-6 sm:p-8 lg:p-10">
+              <div className="max-w-4xl mx-auto">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-8 text-center">
+                  The Ultimate Guide to Image-to-Text Conversion
+                </h2>
+                
+                <div className="prose prose-lg max-w-none">
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    What is OCR Technology?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Optical Character Recognition (OCR) is a revolutionary technology that converts images containing text into editable digital text. Our advanced AI-powered OCR system can accurately extract text from various sources including scanned documents, photographs, screenshots, and even handwritten notes. This technology has transformed how businesses and individuals handle document processing, making it faster, more efficient, and more accessible than ever before.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    Why Choose PictoTextOnline for OCR?
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    PictoTextOnline stands out as the premier choice for image-to-text conversion due to our cutting-edge AI technology, exceptional accuracy rates, and user-friendly interface. Our platform processes documents in seconds, supports multiple languages, and maintains the highest standards of data security. Whether you're a student digitizing handwritten notes, a business professional processing invoices, or a researcher extracting data from printed materials, our tool provides the reliability and precision you need.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    Key Features and Benefits
+                  </h3>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                    <li><strong>High Accuracy:</strong> Our AI achieves 99%+ accuracy even with complex fonts and handwriting</li>
+                    <li><strong>Multi-language Support:</strong> Extract text from documents in over 100 languages</li>
+                    <li><strong>Fast Processing:</strong> Get results in seconds, not minutes</li>
+                    <li><strong>Privacy Focused:</strong> Your documents are processed securely and never stored</li>
+                    <li><strong>No Registration Required:</strong> Start converting immediately without creating an account</li>
+                    <li><strong>Multiple Format Support:</strong> Work with JPG, PNG, PDF, and more file types</li>
+                  </ul>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    Common Use Cases and Applications
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    Image-to-text conversion has become essential across various industries and personal use cases:
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                    <li><strong>Business & Finance:</strong> Digitize invoices, receipts, contracts, and financial documents for automated processing</li>
+                    <li><strong>Education:</strong> Convert handwritten notes, textbooks, and research papers into searchable digital formats</li>
+                    <li><strong>Healthcare:</strong> Extract patient information from medical forms and prescription labels</li>
+                    <li><strong>Legal:</strong> Process legal documents, contracts, and case files for digital archiving</li>
+                    <li><strong>Research:</strong> Extract data from printed research papers and historical documents</li>
+                    <li><strong>Personal Use:</strong> Digitize family photos with text, handwritten letters, and personal documents</li>
+                  </ul>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    How Our Advanced OCR Technology Works
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    Our OCR system employs state-of-the-art machine learning algorithms that have been trained on millions of documents. The process begins with image preprocessing, where we enhance image quality and remove noise. Next, our AI analyzes the visual patterns to identify individual characters and words. The system then applies contextual understanding to improve accuracy, recognizing common phrases and correcting potential errors. Finally, the extracted text is formatted and presented in a clean, editable format that maintains the original document's structure.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    Expert Tips for Best Results
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-4">
+                    To achieve optimal results with our OCR tool, consider these expert recommendations:
+                  </p>
+                  <ul className="list-disc list-inside text-gray-700 space-y-2 mb-6">
+                    <li>Ensure good lighting and high image resolution (300 DPI or higher)</li>
+                    <li>Position the camera or scanner perpendicular to the document surface</li>
+                    <li>Avoid shadows, glare, and creases that could interfere with text recognition</li>
+                    <li>For handwritten text, use clear, legible handwriting for better accuracy</li>
+                    <li>Process documents in their original language for best results</li>
+                  </ul>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    Security and Privacy Commitment
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    At PictoTextOnline, we prioritize the security and privacy of your documents. All file processing occurs in secure, encrypted environments, and we implement strict data protection measures. Your documents are automatically deleted from our servers after processing, ensuring that sensitive information never remains in our system. We comply with international data protection regulations and maintain the highest standards of cybersecurity to protect your valuable information.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">
+                    The Future of Document Processing
+                  </h3>
+                  <p className="text-gray-700 leading-relaxed mb-6">
+                    As technology continues to evolve, OCR capabilities are becoming increasingly sophisticated. Future developments include enhanced handwriting recognition, real-time translation capabilities, and integration with cloud storage platforms. PictoTextOnline remains at the forefront of these innovations, continuously improving our algorithms and expanding our feature set to meet the growing demands of our users.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
