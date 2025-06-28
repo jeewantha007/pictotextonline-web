@@ -1,6 +1,6 @@
 import React from 'react';
 import { FileText, Users, Shield, AlertCircle, Scale, Crown, Gavel, Clock } from 'lucide-react';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const TermsOfUse = () => {
   const sections = [

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Eye, Zap, Shield, Download, CheckCircle, ArrowRight, FileText, Camera, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
 

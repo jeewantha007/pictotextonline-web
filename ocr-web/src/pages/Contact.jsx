@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, MessageCircle, Send, CheckCircle, User, AtSign, Heart } from 'lucide-react';
 import emailjs from 'emailjs-com';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 import { Link } from 'react-router-dom';
 
 const Contact = () => {
