@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Header from '../components/Header';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const WordCounter = () => {
   const [text, setText] = useState('');

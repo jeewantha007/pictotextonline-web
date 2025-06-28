@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Grammar from '../components/Grammar';
 import Format from '../components/Format';
 import Header from '../components/Header';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
+import { CheckCircle, AlertCircle, Copy, Download, Upload, FileText, Sparkles } from 'lucide-react';
 
 const GrammarChecker = () => {
   const [inputText, setInputText] = useState('');

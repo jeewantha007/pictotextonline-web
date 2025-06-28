@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import UploadBox from '../components/UploadBox';
 import ConvertButton from '../components/ConvertButton';
 import ResultBox from '../components/ResultBox';
@@ -9,7 +9,8 @@ import Header from '../components/Header';
 import FileInfoDisplay from '../components/FileInfoDisplay';
 import ProcessingStats from '../components/ProcessingStats';
 import BlogSection from '../components/BlogSection';
-import { Helmet } from "react-helmet";
+import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const Home = () => {
   const [selectedFile, setSelectedFile] = useState(null);

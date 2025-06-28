@@ -1,6 +1,6 @@
 import React from 'react';
 import { Shield, Eye, Lock, Globe, FileText, Clock, Users, Database, Server } from 'lucide-react';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 const PrivacyPolicy = () => {
   const sections = [
