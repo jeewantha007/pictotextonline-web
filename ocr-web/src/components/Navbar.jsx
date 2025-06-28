@@ -92,6 +92,28 @@ const Navbar = () => {
                 Contact
               </Link>
               <Link 
+                to="/faq" 
+                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                  location.pathname === '/faq' 
+                    ? 'text-blue-600' 
+                    : isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
+                onClick={closeMenu}
+              >
+                FAQ
+              </Link>
+              <Link 
+                to="/how-to-use" 
+                className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
+                  location.pathname === '/how-to-use' 
+                    ? 'text-blue-600' 
+                    : isScrolled ? 'text-gray-700' : 'text-white'
+                }`}
+                onClick={closeMenu}
+              >
+                How to Use
+              </Link>
+              <Link 
                 to="/grammar-checker" 
                 className={`font-medium transition-colors duration-200 hover:text-blue-600 ${
                   location.pathname === '/grammar-checker' 
@@ -177,6 +199,28 @@ const Navbar = () => {
                 onClick={closeMenu}
               >
                 Contact
+              </Link>
+              <Link 
+                to="/faq" 
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                  location.pathname === '/faq' 
+                    ? 'bg-blue-50 text-blue-600' 
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                }`}
+                onClick={closeMenu}
+              >
+                FAQ
+              </Link>
+              <Link 
+                to="/how-to-use" 
+                className={`block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200 ${
+                  location.pathname === '/how-to-use' 
+                    ? 'bg-blue-50 text-blue-600' 
+                    : 'text-gray-700 hover:bg-gray-50 hover:text-gray-900'
+                }`}
+                onClick={closeMenu}
+              >
+                How to Use
               </Link>
               <Link 
                 to="/grammar-checker" 
